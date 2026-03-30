@@ -43,6 +43,7 @@ const HeroSection = () => {
       >
         {/* Eyebrow */}
         <span
+          className="text-5xl font-semibold text-left text-destructive-foreground bg-inherit"
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 11,
@@ -51,11 +52,12 @@ const HeroSection = () => {
             color: "#C9A96E",
           }}
         >
-          HAIR &bull; NAILS &bull; BEAUTY &bull; WELLNESS
+          {"\n"}
         </span>
 
         {/* Main Heading */}
         <h1
+          className="text-5xl font-semibold text-left text-destructive-foreground bg-inherit"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(52px, 8vw, 92px)",
@@ -66,11 +68,12 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Dubai's Home for Exceptional Hair &amp; Beauty
+          Premium Ladies Beauty Salon
         </h1>
 
         {/* Subheading */}
         <p
+          className="text-5xl font-semibold text-left text-destructive-foreground bg-inherit"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(18px, 2.2vw, 26px)",
@@ -80,8 +83,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Expert stylists, premium products, and a sanctuary atmosphere — in the
-          heart of Dubai.
+          {"\n"}
         </p>
 
         {/* Buttons */}
