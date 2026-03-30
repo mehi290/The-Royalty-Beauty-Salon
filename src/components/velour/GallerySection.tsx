@@ -1,57 +1,78 @@
-import { useState } from "react";
-import { PlusCircle, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 
-const images = [
-  "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&q=80",
-  "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80",
-  "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=80",
-  "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=500&q=80",
-  "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80",
-  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80",
+const transformations = [
+  { title: "Balayage Transformation", beforeGradient: "from-stone-400 to-stone-300", afterGradient: "from-amber-200 to-yellow-100" },
+  { title: "Bridal Updo", beforeGradient: "from-stone-500 to-stone-400", afterGradient: "from-rose-200 to-pink-100" },
+  { title: "Keratin Treatment", beforeGradient: "from-zinc-400 to-zinc-300", afterGradient: "from-amber-100 to-orange-50" },
+  { title: "Colour Correction", beforeGradient: "from-stone-400 to-neutral-300", afterGradient: "from-red-200 to-rose-100" },
+  { title: "Precision Cut", beforeGradient: "from-gray-400 to-gray-300", afterGradient: "from-stone-200 to-amber-50" },
+  { title: "Hair Extensions", beforeGradient: "from-neutral-400 to-neutral-300", afterGradient: "from-yellow-100 to-amber-50" },
 ];
 
-const GalleryImage = ({ src, alt }: { src: string; alt: string }) => {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        breakInside: "avoid",
-        marginBottom: 10,
-        overflow: "hidden",
-        position: "relative",
-        cursor: "pointer",
-      }}
-    >
-      <img
-        src={src}
-        alt={alt}
-        style={{
-          width: "100%",
-          display: "block",
-          objectFit: "cover",
-          transform: hovered ? "scale(1.03)" : "scale(1)",
-          transition: "transform 0.3s ease",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "rgba(201,169,110,0.2)",
-          opacity: hovered ? 1 : 0,
-          transition: "opacity 0.3s ease",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <PlusCircle color="white" size={32} />
+const BeforeAfterCard = ({ title, beforeGradient, afterGradient }: typeof transformations[0]) => (
+  <div style={{ border: "1px solid #E5E0D8" }}>
+    <div className="flex">
+      {/* Before */}
+      <div className="relative w-1/2">
+        <div className={`bg-gradient-to-br ${beforeGradient} aspect-[3/4] flex items-center justify-center`}>
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 10,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#6B6B6B",
+              background: "rgba(255,255,255,0.85)",
+              padding: "4px 12px",
+            }}
+          >
+            Before
+          </span>
+        </div>
+      </div>
+      {/* Gold divider */}
+      <div style={{ width: 2, background: "#C9A96E" }} />
+      {/* After */}
+      <div className="relative w-1/2">
+        <div className={`bg-gradient-to-br ${afterGradient} aspect-[3/4] flex items-center justify-center`}>
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 10,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#6B6B6B",
+              background: "rgba(255,255,255,0.85)",
+              padding: "4px 12px",
+            }}
+          >
+            After
+          </span>
+        </div>
       </div>
     </div>
-  );
-};
+    {/* Title */}
+    <div
+      style={{
+        padding: "14px 16px",
+        borderTop: "1px solid #E5E0D8",
+        textAlign: "center",
+      }}
+    >
+      <span
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          fontSize: 12,
+          textTransform: "uppercase",
+          letterSpacing: "0.15em",
+          color: "#C9A96E",
+        }}
+      >
+        {title}
+      </span>
+    </div>
+  </div>
+);
 
 const GallerySection = () => (
   <section
@@ -82,17 +103,14 @@ const GallerySection = () => (
             marginTop: 12,
           }}
         >
-          The Results Speak for Themselves
+          Before &amp; After Transformations
         </h2>
       </div>
 
-      {/* Masonry */}
-      <div
-        className="columns-1 sm:columns-2 lg:columns-3"
-        style={{ columnGap: 10 }}
-      >
-        {images.map((src, i) => (
-          <GalleryImage key={i} src={src} alt={`Velour salon work ${i + 1}`} />
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {transformations.map((t, i) => (
+          <BeforeAfterCard key={i} {...t} />
         ))}
       </div>
 
