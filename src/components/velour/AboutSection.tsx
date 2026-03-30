@@ -23,6 +23,7 @@ const AboutSection = () => (
       {/* Text */}
       <div className="md:w-[60%]">
         <span
+          className="font-semibold"
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 11,
@@ -57,20 +58,14 @@ const AboutSection = () => (
           <p>
             Velour Salon has been part of Dubai's beauty scene for over a decade.
             Nestled in the vibrant heart of the city, we've built a loyal
-            community of clients who come to us not just for great hair — but for
+            community of clients who come to us not just for great hair but for
             the experience.
           </p>
           <p style={{ marginTop: 16 }}>
-            Our team of 15 internationally trained stylists and therapists
-            specialize in everything from precision haircuts and colour to nails,
-            facials, and bridal transformations. We use only premium brands —
-            Olaplex, Kérastase, L'Oréal Professionnel, and Schwarzkopf — because
-            your hair deserves nothing less.
+            
           </p>
           <p style={{ marginTop: 16 }}>
-            We welcome every client — every hair type, every background, every
-            style vision. Whether you're a Dubai local, a long-term resident, or
-            visiting from abroad, Velour is your beauty home.
+            
           </p>
         </div>
         <hr
@@ -104,6 +99,7 @@ const AboutSection = () => (
       <div className="md:w-[40%] w-full">
         <img
           src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
+          src="30ec6ff5-e570-4b00-a71c-7dce23c5051e.jpg"
           alt="Inside Velour Salon Dubai"
           className="h-[300px] md:h-[540px]"
           style={{
