@@ -57,7 +57,7 @@ const HeroSection = () => {
 
         {/* Main Heading */}
         <h1
-          className="text-5xl font-semibold text-left text-destructive-foreground bg-inherit"
+          className="text-5xl font-semibold text-destructive-foreground bg-inherit text-center"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(52px, 8vw, 92px)",
