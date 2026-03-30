@@ -106,6 +106,7 @@ const HeroSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
+              fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
               background: "#C9A96E",
