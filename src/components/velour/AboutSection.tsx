@@ -98,7 +98,6 @@ const AboutSection = () => (
       {/* Image */}
       <div className="md:w-[40%] w-full">
         <img
-          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
           src="30ec6ff5-e570-4b00-a71c-7dce23c5051e.jpg"
           alt="Inside Velour Salon Dubai"
           className="h-[300px] md:h-[540px]"
