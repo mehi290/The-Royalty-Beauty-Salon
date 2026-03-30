@@ -11,12 +11,26 @@ const HeroSection = () => {
         height: "100vh",
         position: "relative",
         overflow: "hidden",
-        backgroundImage:
-          "url(https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=85)",
-        backgroundSize: "cover",
-        backgroundPosition: "center 30%",
       }}
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center 30%",
+          zIndex: 0,
+        }}
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
       {/* Overlay */}
       <div
         style={{
