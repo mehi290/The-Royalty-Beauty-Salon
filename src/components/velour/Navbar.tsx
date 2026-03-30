@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "SERVICES", href: "#services" },
-  { label: "PACKAGES", href: "#pricing" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "Services", href: "#services" },
+  { label: "Packages", href: "#pricing" },
+  { label: "Testimonials", href: "#reviews" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -88,7 +89,7 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: 72,
+            height: 68,
           }}
         >
           {/* Logo */}
@@ -96,24 +97,13 @@ const Navbar = () => {
             <div
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 26,
-                color: "#C9A96E",
-                letterSpacing: "0.2em",
+                fontSize: 28,
+                color: "white",
+                letterSpacing: "0.22em",
                 lineHeight: 1,
               }}
             >
               VELOUR
-            </div>
-            <div
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: 9,
-                letterSpacing: "0.35em",
-                color: "#888888",
-                textTransform: "uppercase",
-              }}
-            >
-              SALON &bull; DUBAI
             </div>
           </div>
 
@@ -127,15 +117,16 @@ const Navbar = () => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className="velour-nav-link"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: 11,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.18em",
+                  fontSize: 13,
+                  fontWeight: 400,
+                  textTransform: "none",
+                  letterSpacing: "0.06em",
                   color: "#E8E0D5",
                   textDecoration: "none",
-                  transition: "color 0.3s ease",
+                  transition: "opacity 0.2s ease",
+                  opacity: 0.95,
                 }}
               >
                 {link.label}
@@ -151,39 +142,28 @@ const Navbar = () => {
             className="hidden md:inline-flex"
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.15em",
-              color: "#C9A96E",
-              border: "1.5px solid #C9A96E",
-              background: "transparent",
-              padding: "10px 24px",
+              fontSize: 13,
+              textTransform: "capitalize",
+              letterSpacing: "0.06em",
+              color: "#111111",
+              border: "none",
+              background: "#C9A96E",
+              padding: "10px 22px",
               textDecoration: "none",
-              transition: "all 0.3s ease",
+              transition: "filter 0.2s ease",
               display: "inline-flex",
               alignItems: "center",
-              gap: 10,
-              borderRadius: 3,
+              gap: 0,
+              borderRadius: 5,
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#C9A96E";
-              e.currentTarget.style.color = "#111111";
+              e.currentTarget.style.filter = "brightness(1.04)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#C9A96E";
+              e.currentTarget.style.filter = "brightness(1)";
             }}
           >
             BOOK ON WHATSAPP
-            <span
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: "50%",
-                background: "#25D366",
-                display: "inline-block",
-              }}
-            />
           </a>
 
           {/* Mobile Menu Icon */}
@@ -263,19 +243,18 @@ const Navbar = () => {
             marginTop: 24,
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
+            textTransform: "capitalize",
+            letterSpacing: "0.06em",
             color: "#111111",
             background: "#C9A96E",
             padding: "16px 40px",
             textDecoration: "none",
-            borderRadius: 3,
+            borderRadius: 5,
             display: "inline-flex",
             alignItems: "center",
-            gap: 10,
+            gap: 0,
           }}
         >
-          <MessageCircle size={16} color="#25D366" />
           BOOK ON WHATSAPP
         </a>
       </div>

@@ -93,7 +93,7 @@ const PricingSection = () => (
   <section
     id="pricing"
     className="velour-section"
-    style={{ background: "#111111", padding: "100px 0" }}
+    style={{ background: "#FFFFFF", padding: "100px 0" }}
   >
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
       {/* Header */}
@@ -114,7 +114,7 @@ const PricingSection = () => (
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(28px, 3vw, 42px)",
             fontWeight: 400,
-            color: "white",
+            color: "#111111",
             marginTop: 12,
           }}
         >
@@ -124,7 +124,7 @@ const PricingSection = () => (
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 14,
-            color: "#888888",
+            color: "#4A4A4A",
             marginTop: 12,
             maxWidth: 600,
             margin: "12px auto 0",

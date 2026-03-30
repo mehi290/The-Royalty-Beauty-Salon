@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/velour/Navbar";
 import HeroSection from "@/components/velour/HeroSection";
 import StatsBar from "@/components/velour/StatsBar";
+import SeenInMarquee from "@/components/velour/SeenInMarquee";
 import AboutSection from "@/components/velour/AboutSection";
 import ServicesSection from "@/components/velour/ServicesSection";
 import GallerySection from "@/components/velour/GallerySection";
@@ -36,6 +37,7 @@ const Index = () => {
       <HeroSection />
       <StatsBar />
       <AboutSection />
+      <SeenInMarquee />
       <ServicesSection />
       <GallerySection />
       <ReviewsSection />

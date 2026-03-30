@@ -101,6 +101,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes velour-marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Nav link underline animation */
 .velour-nav-link {
   position: relative;
@@ -120,6 +125,23 @@
 }
 .velour-nav-link:hover {
   color: #C9A96E;
+}
+
+.velour-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 72px;
+  animation: velour-marquee-left 20s linear infinite;
+  will-change: transform;
+}
+
+.velour-marquee-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 33px;
+  letter-spacing: 0.01em;
+  color: #8A8A88;
+  white-space: nowrap;
 }
 
 /* Section reveal */

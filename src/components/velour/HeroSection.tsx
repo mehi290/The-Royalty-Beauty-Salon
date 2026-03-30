@@ -1,5 +1,3 @@
-import { ChevronDown } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToServices = () => {
     document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
@@ -30,7 +28,7 @@ const HeroSection = () => {
           zIndex: 0,
         }}
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
       {/* Overlay */}
       <div
@@ -55,20 +53,7 @@ const HeroSection = () => {
           padding: "0 20px",
           textAlign: "center",
         }}
-      >
-        {/* Eyebrow */}
-        <span
-          className="text-5xl font-semibold text-left text-destructive-foreground bg-inherit"
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.3em",
-            color: "#C9A96E",
-          }}
-        >
-          JUMEIRAH 1, DUBAI
-        </span>
+      >     
 
         {/* Main Heading */}
         <h1
@@ -83,7 +68,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Premium Ladies Beauty Salon
+          When Beauty Meets Artistry
         </h1>
 
         {/* Subheading */}
@@ -135,7 +120,7 @@ const HeroSection = () => {
             onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
-            BOOK ON WHATSAPP
+            BOOK NOW
           </a>
           <button
             onClick={scrollToServices}
@@ -145,19 +130,21 @@ const HeroSection = () => {
               fontSize: 11,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
-              background: "transparent",
-              color: "white",
+              background: "#ffffff",
+              color: "#111111",
               padding: "16px 40px",
-              border: "1.5px solid rgba(255,255,255,0.7)",
+              border: "1.5px solid rgba(0,0,0,0.2)",
               cursor: "pointer",
               borderRadius: 3,
               transition: "all 0.3s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+              e.currentTarget.style.background = "#f4f4f4";
+              e.currentTarget.style.color = "#111111";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.background = "#ffffff";
+              e.currentTarget.style.color = "#111111";
             }}
           >
             EXPLORE SERVICES
@@ -165,19 +152,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bouncing Arrow */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 32,
-          left: "50%",
-          transform: "translateX(-50%)",
-          animation: "velour-bounce 2s infinite ease-in-out",
-          zIndex: 1,
-        }}
-      >
-        <ChevronDown color="#C9A96E" size={28} />
-      </div>
     </section>
   );
 };

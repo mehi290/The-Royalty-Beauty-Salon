@@ -66,11 +66,7 @@ const AboutSection = () => (
             we combine international techniques with products trusted by top
             stylists worldwide.
           </p>
-          <p style={{ marginTop: 16 }}>
-            Our goal is simple: a welcoming, premium salon experience where every
-            appointment feels personal and every result feels confidently you.
-          </p>
-        </div>
+           </div>
         <hr
           style={{
             border: "none",
@@ -98,12 +94,15 @@ const AboutSection = () => (
         </div>
       </div>
 
-      {/* Image */}
+      {/* Media */}
       <div className="md:w-[40%] w-full">
-        <img
-          src="/d9d7f89d-3aa1-41b2-b69e-908341da4786.jpg"
-          alt="Inside Velour Salon Dubai"
+        <video
+          src="/videos/WhatsApp Video 2026-03-30 at 6.53.45 PM (1).mp4"
           className="h-[300px] md:h-[540px]"
+          autoPlay
+          muted
+          loop
+          playsInline
           style={{
             width: "100%",
             objectFit: "cover",
