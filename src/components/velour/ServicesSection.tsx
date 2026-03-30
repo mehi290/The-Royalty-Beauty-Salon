@@ -180,7 +180,7 @@ const ServicesSection = () => (
             marginTop: 12,
           }}
         >
-          From a quick blowdry to a full bridal transformation — we do it all,
+          From a quick blowdry to a full bridal transformation, all done
           beautifully.
         </p>
       </div>
