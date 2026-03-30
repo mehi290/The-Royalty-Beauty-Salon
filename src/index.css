@@ -126,6 +126,7 @@
 .velour-section {
   opacity: 0;
   transform: translateY(32px);
+  scroll-margin-top: 90px;
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .velour-section.is-visible {

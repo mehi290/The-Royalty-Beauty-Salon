@@ -62,10 +62,13 @@ const AboutSection = () => (
             the experience.
           </p>
           <p style={{ marginTop: 16 }}>
-            
+            From precision cuts to colour transformations and advanced treatments,
+            we combine international techniques with products trusted by top
+            stylists worldwide.
           </p>
           <p style={{ marginTop: 16 }}>
-            
+            Our goal is simple: a welcoming, premium salon experience where every
+            appointment feels personal and every result feels confidently you.
           </p>
         </div>
         <hr

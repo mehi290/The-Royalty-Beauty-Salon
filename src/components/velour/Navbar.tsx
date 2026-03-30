@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 
 const navLinks = [
   { label: "SERVICES", href: "#services" },
-  { label: "OUR TEAM", href: "#team" },
-  
   { label: "PACKAGES", href: "#pricing" },
   { label: "CONTACT", href: "#contact" },
 ];
@@ -12,12 +10,55 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+    const menu = menuRef.current;
+    const focusable = menu?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable?.[0];
+    const last = focusable?.[focusable.length - 1];
+    first?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        return;
+      }
+
+      if (event.key === "Tab" && focusable && focusable.length > 0) {
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKeyDown);
+      menuButtonRef.current?.focus();
+    };
+  }, [menuOpen]);
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
@@ -102,7 +143,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop Book Now */}
+          {/* Desktop Primary CTA */}
           <a
             href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
             target="_blank"
@@ -133,7 +174,7 @@ const Navbar = () => {
               e.currentTarget.style.color = "#C9A96E";
             }}
           >
-            BOOK NOW
+            BOOK ON WHATSAPP
             <span
               style={{
                 width: 6,
@@ -148,17 +189,23 @@ const Navbar = () => {
           {/* Mobile Menu Icon */}
           <button
             className="md:hidden"
-            onClick={() => setMenuOpen(true)}
+            onClick={() => setMenuOpen((prev) => !prev)}
             style={{ background: "none", border: "none", cursor: "pointer" }}
-            aria-label="Open menu"
+            ref={menuButtonRef}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
-            <Menu color="#E8E0D5" size={28} />
+            {menuOpen ? <X color="#E8E0D5" size={28} /> : <Menu color="#E8E0D5" size={28} />}
           </button>
         </div>
       </nav>
 
       {/* Mobile Overlay */}
       <div
+        id="mobile-menu"
+        ref={menuRef}
+        aria-hidden={!menuOpen}
         style={{
           position: "fixed",
           inset: 0,
@@ -171,6 +218,7 @@ const Navbar = () => {
           gap: 32,
           transform: menuOpen ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.4s ease",
+          pointerEvents: menuOpen ? "auto" : "none",
         }}
       >
         <button

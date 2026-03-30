@@ -1,7 +1,15 @@
 import { Instagram, Facebook, MessageCircle, Video } from "lucide-react";
 
 const services = ["Cut & Styling", "Colour & Balayage", "Keratin", "Hair Extensions", "Nails", "Facials", "Lashes & Brows", "Bridal"];
-const links = ["Home", "About", "Our Work", "Team", "Packages", "Blog", "Careers", "Contact"];
+const exploreLinks: Array<{ label: string; href?: string }> = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Our Work", href: "#gallery" },
+  { label: "Packages", href: "#pricing" },
+  { label: "Blog" },
+  { label: "Careers" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Footer = () => (
   <footer style={{ background: "#0D0D0D", padding: "80px 40px 36px" }}>
@@ -45,10 +53,19 @@ const Footer = () => (
         </p>
         <div style={{ display: "flex", gap: 16, marginTop: 24 }}>
           {[Instagram, Facebook, MessageCircle, Video].map((Icon, i) => (
-            <a
+            <button
               key={i}
-              href="#"
-              style={{ color: "#C9A96E", transition: "all 0.3s ease" }}
+              type="button"
+              aria-label="Social link coming soon"
+              title="Coming soon"
+              style={{
+                color: "#C9A96E",
+                transition: "all 0.3s ease",
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "not-allowed",
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = "white";
                 e.currentTarget.style.transform = "scale(1.1)";
@@ -59,7 +76,7 @@ const Footer = () => (
               }}
             >
               <Icon size={18} />
-            </a>
+            </button>
           ))}
         </div>
       </div>
@@ -113,25 +130,44 @@ const Footer = () => (
         >
           EXPLORE
         </div>
-        {links.map((l) => (
-          <a
-            key={l}
-            href={`#${l.toLowerCase().replace(/\s/g, "-")}`}
-            style={{
-              display: "block",
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 13,
-              color: "#666666",
-              lineHeight: 2.2,
-              textDecoration: "none",
-              transition: "color 0.3s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#666666")}
-          >
-            {l}
-          </a>
-        ))}
+        {exploreLinks.map((link) =>
+          link.href ? (
+            <a
+              key={link.label}
+              href={link.href}
+              style={{
+                display: "block",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 13,
+                color: "#666666",
+                lineHeight: 2.2,
+                textDecoration: "none",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#666666")}
+            >
+              {link.label}
+            </a>
+          ) : (
+            <span
+              key={link.label}
+              aria-disabled="true"
+              style={{
+                display: "block",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 13,
+                color: "#444444",
+                lineHeight: 2.2,
+                cursor: "not-allowed",
+                userSelect: "none",
+              }}
+              title="Coming soon"
+            >
+              {link.label}
+            </span>
+          )
+        )}
       </div>
 
       {/* Contact */}
@@ -199,21 +235,19 @@ const Footer = () => (
       </span>
       <div style={{ display: "flex", gap: 16 }}>
         {["Privacy Policy", "Terms & Conditions"].map((t) => (
-          <a
+          <span
             key={t}
-            href="#"
+            aria-disabled="true"
+            title="Coming soon"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
               color: "#444444",
-              textDecoration: "none",
-              transition: "color 0.3s ease",
+              cursor: "not-allowed",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#444444")}
           >
             {t}
-          </a>
+          </span>
         ))}
       </div>
     </div>

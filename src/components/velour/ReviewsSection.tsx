@@ -1,186 +1,177 @@
-import { Star } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const reviews = [
   {
-    text: "I've tried every salon from Jumeirah to JBR and nothing comes close to Velour. My balayage came out exactly as I showed them. No damage, no brassiness — just perfect. Booked my next appointment before I even left.",
-    name: "Sarah M.",
-    location: "Jumeirah, Dubai",
-    initial: "S",
+    text: "The membership benefits are incredible value. I love having priority booking and the complimentary treatments. It is my favorite self-care destination.",
+    name: "Natalia Volkov",
+    location: "Diamond Member",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "As someone with thick, curly hair, I always dreaded salons in Dubai. Velour genuinely understands all hair types. My keratin lasted 4 months and my hair has never felt healthier. The atmosphere is so calm and welcoming.",
-    name: "Aisha K.",
-    location: "Downtown Dubai",
-    initial: "A",
+    text: "Every visit feels luxurious and relaxing. The team is attentive, skilled, and always delivers exactly what I ask for. I leave feeling confident every time.",
+    name: "Aisha Karim",
+    location: "Gold Member",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "Came in for a quick nail appointment and ended up getting my hair done too — couldn't resist! Both were absolutely flawless. The team are so warm and professional. This is my place now.",
-    name: "Priya R.",
-    location: "Dubai Marina",
-    initial: "P",
+    text: "From hair to nails, every service is top-notch. Booking is smooth, the salon is beautiful, and the stylists truly care about quality and detail.",
+    name: "Priya Rao",
+    location: "Platinum Member",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
   },
 ];
 
-const ReviewsSection = () => (
-  <section
-    className="velour-section"
-    style={{ background: "#111111", padding: "100px 0" }}
-  >
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 60 }}>
-        <span
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.25em",
-            color: "#C9A96E",
-          }}
-        >
-          CLIENT LOVE
-        </span>
-        <h2
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(28px, 3vw, 42px)",
-            fontWeight: 400,
-            color: "white",
-            marginTop: 12,
-          }}
-        >
-          Over 1,000 Five-Star Reviews
-        </h2>
-        <p
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 15,
-            color: "#E8E0D5",
-            marginTop: 12,
-          }}
-        >
-          Don't take our word for it — here's what our Dubai clients say.
-        </p>
-      </div>
+const ReviewsSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeReview = reviews[activeIndex];
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 24 }}>
-        {reviews.map((r) => (
-          <div
-            key={r.name}
+  const showPrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+  };
+
+  const showNext = () => {
+    setActiveIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <section
+      id="reviews"
+      className="velour-section"
+      style={{ background: "#ECEAE7", padding: "110px 0" }}
+    >
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
+        <div
+          style={{
+            position: "relative",
+            maxWidth: 980,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <button
+            type="button"
+            aria-label="Previous testimonial"
+            onClick={showPrev}
             style={{
-              background: "#1E1E1E",
-              padding: "40px 36px",
-              borderTop: "3px solid #C9A96E",
+              width: 44,
+              height: 44,
+              borderRadius: "9999px",
+              border: "1px solid #E0DDD7",
+              background: "#FAFAFA",
+              color: "#666666",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "absolute",
+              left: 12,
+              top: "50%",
+              transform: "translateY(-50%)",
             }}
           >
-            {/* Stars */}
-            <div style={{ display: "flex", gap: 4 }}>
+            <ChevronLeft size={18} />
+          </button>
+
+          <article
+            style={{
+              background: "#F7F7F6",
+              border: "1px solid #DBD8D2",
+              borderRadius: 14,
+              width: "100%",
+              padding: "36px 34px",
+              textAlign: "center",
+              minHeight: 335,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src={activeReview.image}
+              alt={activeReview.name}
+              style={{
+                width: 82,
+                height: 82,
+                borderRadius: "50%",
+                objectFit: "cover",
+                margin: "0 auto",
+                border: "3px solid #D7C39B",
+              }}
+            />
+
+            <div style={{ display: "flex", gap: 4, justifyContent: "center", marginTop: 16 }}>
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={14} color="#C9A96E" fill="#C9A96E" />
               ))}
             </div>
 
-            {/* Quote mark */}
-            <div
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 52,
-                color: "#C9A96E",
-                lineHeight: 1,
-                marginTop: 20,
-              }}
-            >
-              ❝
-            </div>
-
-            {/* Review text */}
             <p
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 18,
-                fontStyle: "italic",
-                color: "white",
-                lineHeight: 1.75,
-                marginTop: 8,
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "clamp(21px, 2.2vw, 34px)",
+                lineHeight: 1.45,
+                color: "#222222",
+                maxWidth: 760,
+                margin: "18px auto 0 auto",
               }}
             >
-              {r.text}
+              "{activeReview.text}"
             </p>
 
-            {/* Author */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 14,
-                marginTop: 28,
-              }}
-            >
+            <div style={{ marginTop: 18 }}>
               <div
                 style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  background: "#C9A96E",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 14,
-                  fontWeight: 700,
-                  color: "white",
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: 32,
+                  color: "#2E2E2E",
+                  lineHeight: 1.1,
                 }}
               >
-                {r.initial}
+                {activeReview.name}
               </div>
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 13,
-                    color: "#E8E0D5",
-                    fontWeight: 500,
-                  }}
-                >
-                  {r.name}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 11,
-                    color: "#888888",
-                  }}
-                >
-                  {r.location} · ★ Google Reviews
-                </div>
+              <div
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: 18,
+                  color: "#8D7A55",
+                }}
+              >
+                {activeReview.location}
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          </article>
 
-      {/* Trust badges */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 16,
-          marginTop: 48,
-          fontFamily: "'Inter', sans-serif",
-          fontSize: 12,
-          textTransform: "uppercase",
-          color: "#E8E0D5",
-          letterSpacing: "0.1em",
-        }}
-      >
-        <span>4.9 / 5 on Google</span>
-        <span style={{ color: "#C9A96E" }}>◆</span>
-        <span>1,000+ Happy Clients</span>
+          <button
+            type="button"
+            aria-label="Next testimonial"
+            onClick={showNext}
+            style={{
+              width: 44,
+              height: 44,
+              borderRadius: "9999px",
+              border: "1px solid #E0DDD7",
+              background: "#FAFAFA",
+              color: "#666666",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "absolute",
+              right: 12,
+              top: "50%",
+              transform: "translateY(-50%)",
+            }}
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ReviewsSection;

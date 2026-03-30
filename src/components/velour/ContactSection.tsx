@@ -1,7 +1,23 @@
+import { useState } from "react";
 import { MapPin, Phone, Clock, MessageCircle, ExternalLink } from "lucide-react";
 
-const ContactSection = () => (
-  <section
+const salonAddress = "Velour Salon, Shop 12, Al Wasl Road, Jumeirah 1, Dubai, UAE";
+
+const ContactSection = () => {
+  const [copied, setCopied] = useState(false);
+
+  const copyAddress = async () => {
+    try {
+      await navigator.clipboard.writeText(salonAddress);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  return (
+    <section
     id="contact"
     className="velour-section"
     style={{ background: "#FAF7F2", padding: "100px 0" }}
@@ -45,7 +61,7 @@ const ContactSection = () => (
           {[
             {
               icon: <MapPin size={20} color="#C9A96E" />,
-              text: "Velour Salon, Shop 12, Al Wasl Road, Jumeirah 1, Dubai, UAE",
+              text: salonAddress,
             },
             {
               icon: <Phone size={20} color="#C9A96E" />,
@@ -91,6 +107,19 @@ const ContactSection = () => (
             </div>
           ))}
         </div>
+        <div
+          style={{
+            marginTop: 28,
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 13,
+            color: "#5A5A5A",
+            lineHeight: 1.8,
+          }}
+        >
+          <p>Nearest landmark: Al Wasl Road, Jumeirah 1.</p>
+          <p>Parking: street and paid parking available nearby.</p>
+          <p>Nearest metro: Business Bay (short taxi ride).</p>
+        </div>
 
         {/* Buttons */}
         <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
@@ -111,7 +140,29 @@ const ContactSection = () => (
             onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
-            CALL NOW
+            CALL SALON
+          </a>
+          <a
+            href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 11,
+              textTransform: "uppercase",
+              letterSpacing: "0.18em",
+              color: "#C9A96E",
+              border: "1.5px solid #C9A96E",
+              background: "transparent",
+              padding: "14px 32px",
+              textDecoration: "none",
+              borderRadius: 3,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            BOOK ON WHATSAPP
           </a>
           <a
             href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"
@@ -144,66 +195,55 @@ const ContactSection = () => (
           >
             GET DIRECTIONS <ExternalLink size={14} />
           </a>
+          <button
+            onClick={copyAddress}
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 11,
+              textTransform: "uppercase",
+              letterSpacing: "0.18em",
+              color: "#111111",
+              background: "#E8E0D5",
+              border: "1.5px solid #D7CCBE",
+              padding: "14px 32px",
+              textDecoration: "none",
+              borderRadius: 3,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              cursor: "pointer",
+            }}
+          >
+            {copied ? "Address copied" : "Copy address"}
+          </button>
         </div>
       </div>
 
-      {/* Right - Map placeholder */}
+      {/* Right - Embedded map */}
       <div
         className="md:w-[45%] w-full"
         style={{
           height: 380,
-          background: "#1E1E1E",
+          background: "#F0EBE3",
           border: "1px solid #C9A96E",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          overflow: "hidden",
         }}
       >
-        <MapPin size={48} color="#C9A96E" />
-        <div
+        <iframe
+          title="Velour Salon Dubai map"
+          src="https://www.google.com/maps?q=Velour+Salon+Jumeirah+1+Dubai&output=embed"
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 28,
-            color: "white",
-            marginTop: 16,
+            width: "100%",
+            height: "100%",
+            border: 0,
           }}
-        >
-          VELOUR SALON
-        </div>
-        <div
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 13,
-            color: "#888888",
-            marginTop: 4,
-          }}
-        >
-          Jumeirah 1, Dubai
-        </div>
-        <a
-          href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
-            color: "#C9A96E",
-            border: "1.5px dashed #C9A96E",
-            padding: "10px 24px",
-            textDecoration: "none",
-            borderRadius: 3,
-            marginTop: 20,
-            transition: "all 0.3s ease",
-          }}
-        >
-          OPEN IN GOOGLE MAPS →
-        </a>
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
     </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ContactSection;

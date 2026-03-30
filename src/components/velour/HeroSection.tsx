@@ -7,6 +7,7 @@ const HeroSection = () => {
 
   return (
     <section
+      id="home"
       style={{
         height: "100vh",
         position: "relative",
@@ -66,7 +67,7 @@ const HeroSection = () => {
             color: "#C9A96E",
           }}
         >
-          {"\n"}
+          JUMEIRAH 1, DUBAI
         </span>
 
         {/* Main Heading */}
@@ -97,7 +98,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          {"\n"}
+          Luxury hair and beauty treatments tailored to your style, schedule, and hair type.
         </p>
 
         {/* Buttons */}
@@ -134,7 +135,7 @@ const HeroSection = () => {
             onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
-            BOOK APPOINTMENT
+            BOOK ON WHATSAPP
           </a>
           <button
             onClick={scrollToServices}

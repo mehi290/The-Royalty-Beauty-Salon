@@ -5,20 +5,23 @@ const services = [
     name: "Cut & Styling",
     img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80",
     desc: "Precision cuts and blowdries for all hair types. Starting from AED 120.",
+    video: "/colourbalyage.mp4",
   },
   {
     name: "Colour & Balayage",
     img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80",
     desc: "Root touch-ups, full colour, highlights and balayage. From AED 280.",
+    video: "/videos/hair_style.mp4",
   },
   {
     name: "Keratin & Treatments",
     img: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
     desc: "Keratin smoothing, Olaplex, hair botox and deep conditioning. From AED 350.",
+    video: "/keratin.mp4",
   },
   {
     name: "Nails & Manicure",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    img: "/pedi and mani.jpeg",
     desc: "Gel, acrylic, BIAB, and nail art. Gel mani-pedi combo from AED 189.",
   },
   {
@@ -28,36 +31,60 @@ const services = [
   },
   {
     name: "Lashes, Brows & Waxing",
-    img: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
+    img: "/lashes and brows.jpg",
     desc: "Lash lift, brow lamination, threading and full waxing. From AED 35.",
   },
 ];
 
-const ServiceCard = ({ name, img, desc }: (typeof services)[0]) => {
+const ServiceCard = ({ name, img, desc, video }: (typeof services)[0]) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onFocus={() => setHovered(true)}
+      onBlur={() => setHovered(false)}
+      tabIndex={0}
       style={{
         aspectRatio: "3/4",
         position: "relative",
         overflow: "hidden",
         cursor: "pointer",
+        outline: hovered ? "2px solid #C9A96E" : "2px solid transparent",
+        outlineOffset: -2,
       }}
     >
-      <img
-        src={img}
-        alt={name}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          transform: hovered ? "scale(1.05)" : "scale(1)",
-          transition: "transform 0.4s ease",
-        }}
-      />
+      {video ? (
+        <video
+          src={video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={name}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: hovered ? "scale(1.05)" : "scale(1)",
+            transition: "transform 0.4s ease",
+          }}
+        />
+      ) : (
+        <img
+          src={img}
+          alt={name}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: hovered ? "scale(1.05)" : "scale(1)",
+            transition: "transform 0.4s ease",
+          }}
+        />
+      )}
       {/* Always-visible gradient */}
       <div
         style={{
@@ -119,9 +146,8 @@ const ServiceCard = ({ name, img, desc }: (typeof services)[0]) => {
             color: "#C9A96E",
           }}
         >
-          →
+          From AED pricing
         </span>
-        {/* Description on hover */}
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
@@ -129,13 +155,31 @@ const ServiceCard = ({ name, img, desc }: (typeof services)[0]) => {
             color: "#E8E0D5",
             marginTop: 10,
             lineHeight: 1.6,
-            opacity: hovered ? 1 : 0,
-            transform: hovered ? "translateY(0)" : "translateY(12px)",
+            opacity: 1,
+            transform: "translateY(0)",
             transition: "all 0.3s ease",
           }}
         >
           {desc}
         </p>
+        <a
+          href="https://wa.me/971503857200?text=Hi%20Velour!%20I%20want%20to%20book%20a%20service."
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            marginTop: 12,
+            display: "inline-block",
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 11,
+            textTransform: "uppercase",
+            letterSpacing: "0.12em",
+            color: "#C9A96E",
+            textDecoration: "none",
+            borderBottom: hovered ? "1px solid #C9A96E" : "1px solid transparent",
+          }}
+        >
+          Book this service
+        </a>
       </div>
     </div>
   );

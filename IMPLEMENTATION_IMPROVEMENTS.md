@@ -189,57 +189,57 @@ You requested social links remain placeholders. To keep that intentional:
 ## Progress checklist (track as you go)
 
 ### Phase 0 — Baseline
-- [ ] Confirm primary conversion action (WhatsApp vs Call vs Form)
+- [x] Confirm primary conversion action (WhatsApp vs Call vs Form)
 - [ ] Capture baseline desktop screenshots
 - [ ] Capture baseline mobile screenshots
 - [ ] (Optional) Record baseline Lighthouse scores
 - [ ] (Optional) Do baseline keyboard-only navigation notes
 
 ### Phase 1 — Copy gaps
-- [ ] Hero eyebrow text added
-- [ ] Hero subheading/value prop added
-- [ ] About section empty paragraphs removed/replaced
-- [ ] Contact section includes landmark/parking/metro notes (if applicable)
+- [x] Hero eyebrow text added
+- [x] Hero subheading/value prop added
+- [x] About section empty paragraphs removed/replaced
+- [x] Contact section includes landmark/parking/metro notes (if applicable)
 
 ### Phase 2 — Meta / OG / Twitter
-- [ ] Document title updated to brand-accurate title
-- [ ] Meta description written (concise, compelling, location-aware)
-- [ ] `og:title` and `og:description` match the real brand text
-- [ ] `twitter:title` and `twitter:description` match the real brand text
-- [ ] `og:image` and `twitter:image` set to a non-generic asset
+- [x] Document title updated to brand-accurate title
+- [x] Meta description written (concise, compelling, location-aware)
+- [x] `og:title` and `og:description` match the real brand text
+- [x] `twitter:title` and `twitter:description` match the real brand text
+- [x] `og:image` and `twitter:image` set to a non-generic asset
 - [ ] Share preview verified in at least 2 channels/tools
 
 ### Phase 3 — Anchors
-- [ ] Canonical section id list agreed (services/team/packages/contact/etc.)
-- [ ] Header nav links match section ids
-- [ ] Footer “Explore” links match section ids (or intentionally removed/disabled)
-- [ ] Scroll offset verified with fixed navbar (headings not hidden)
+- [x] Canonical section id list agreed (services/team/packages/contact/etc.)
+- [x] Header nav links match section ids
+- [x] Footer “Explore” links match section ids (or intentionally removed/disabled)
+- [x] Scroll offset verified with fixed navbar (headings not hidden)
 
 ### Phase 4 — Mobile menu accessibility
-- [ ] Hamburger has accessible name + expanded state
-- [ ] Menu focuses correctly on open
-- [ ] Focus returns to hamburger on close
-- [ ] ESC closes menu
-- [ ] Focus trap works when menu is open
-- [ ] Background scroll locks while menu open
+- [x] Hamburger has accessible name + expanded state
+- [x] Menu focuses correctly on open
+- [x] Focus returns to hamburger on close
+- [x] ESC closes menu
+- [x] Focus trap works when menu is open
+- [x] Background scroll locks while menu open
 
 ### Phase 5 — Hover-only removal
-- [ ] Services cards show essential info without hover (mobile-friendly)
-- [ ] Hover content is also available on keyboard focus
-- [ ] Cards have clear tap/click targets (not just hover overlay)
-- [ ] Visible focus styles exist for interactive elements
+- [x] Services cards show essential info without hover (mobile-friendly)
+- [x] Hover content is also available on keyboard focus
+- [x] Cards have clear tap/click targets (not just hover overlay)
+- [x] Visible focus styles exist for interactive elements
 
 ### Phase 6 — Map/Contact
-- [ ] Map placeholder replaced (embed or static map + directions)
-- [ ] “Get directions” works on mobile
-- [ ] “Copy address” action present
-- [ ] Contact CTAs are clear and not duplicated confusingly
+- [x] Map placeholder replaced (embed or static map + directions)
+- [x] “Get directions” works on mobile
+- [x] “Copy address” action present
+- [x] Contact CTAs are clear and not duplicated confusingly
 
 ### Phase 7 — Conversion polish
-- [ ] Primary CTA label standardized across sections
-- [ ] Secondary CTA label standardized across sections
+- [x] Primary CTA label standardized across sections
+- [x] Secondary CTA label standardized across sections
 - [ ] Trust cues consistent (rating/years/clients)
-- [ ] Pricing “Most Popular” communicates who it’s for
+- [x] Pricing “Most Popular” communicates who it’s for
 
 ## Notes / decisions log
 

@@ -49,7 +49,7 @@ const GoldButton = ({ dark }: { dark?: boolean }) => (
           }),
     }}
   >
-    BOOK NOW
+    BOOK ON WHATSAPP
   </a>
 );
 

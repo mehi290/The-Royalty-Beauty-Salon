@@ -6,7 +6,6 @@ import AboutSection from "@/components/velour/AboutSection";
 import ServicesSection from "@/components/velour/ServicesSection";
 import GallerySection from "@/components/velour/GallerySection";
 import ReviewsSection from "@/components/velour/ReviewsSection";
-import TeamSection from "@/components/velour/TeamSection";
 import PricingSection from "@/components/velour/PricingSection";
 import OfferBanner from "@/components/velour/OfferBanner";
 import ContactSection from "@/components/velour/ContactSection";
@@ -40,7 +39,6 @@ const Index = () => {
       <ServicesSection />
       <GallerySection />
       <ReviewsSection />
-      <TeamSection />
       <PricingSection />
       <OfferBanner />
       <ContactSection />
