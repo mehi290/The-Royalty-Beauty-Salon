@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const team = [
   {
@@ -80,10 +81,8 @@ const TeamCard = ({ img, name, title, bio }: (typeof team)[0]) => {
       >
         {bio}
       </p>
-      <a
-        href="https://wa.me/971503857200"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/book"
         style={{
           fontFamily: "'Inter', sans-serif",
           fontSize: 12,
@@ -97,7 +96,7 @@ const TeamCard = ({ img, name, title, bio }: (typeof team)[0]) => {
         onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
       >
         Book with {name} →
-      </a>
+      </Link>
     </div>
   );
 };

@@ -145,14 +145,9 @@ const PricingSection = () => (
           marginTop: 36,
         }}
       >
-        Prefer to chat?{" "}
-        <a
-          href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: gold, fontWeight: 600 }}
-        >
-          Message us on WhatsApp
+        Prefer to call?{" "}
+        <a href="tel:+97143857200" style={{ color: gold, fontWeight: 600 }}>
+          +971 4 385 7200
         </a>
       </p>
 

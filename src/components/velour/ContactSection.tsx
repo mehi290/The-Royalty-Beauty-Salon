@@ -80,13 +80,8 @@ const ContactSection = () => {
               icon: <MessageCircle size={20} color="#C9A96E" />,
               text: (
                 <>
-                  WhatsApp bookings:{" "}
-                  <a
-                    href="https://wa.me/971503857200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#25D366", textDecoration: "none" }}
-                  >
+                  Mobile:{" "}
+                  <a href="tel:+971503857200" style={{ color: "#3D3D3D", textDecoration: "none" }}>
                     +971 50 385 7200
                   </a>
                 </>
@@ -143,29 +138,6 @@ const ContactSection = () => {
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
             CALL SALON
-          </a>
-          <a
-            href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              color: "#C9A96E",
-              border: "1.5px solid #C9A96E",
-              background: "transparent",
-              padding: "14px 32px",
-              textDecoration: "none",
-              borderRadius: 3,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-            }}
-          >
-            BOOK ON WHATSAPP
           </a>
           <a
             href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"

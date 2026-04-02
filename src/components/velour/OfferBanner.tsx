@@ -1,5 +1,3 @@
-import { MessageCircle } from "lucide-react";
-
 const OfferBanner = () => (
   <section
     className="velour-section"
@@ -48,29 +46,6 @@ const OfferBanner = () => (
           marginTop: 32,
         }}
       >
-        <a
-          href="https://wa.me/971503857200?text=Hi%20Velour!%20I'm%20a%20new%20client%20and%20would%20like%20to%20book%20with%20the%2020%25%20offer."
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
-            background: "#111111",
-            color: "white",
-            padding: "15px 36px",
-            textDecoration: "none",
-            borderRadius: 3,
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            transition: "background 0.3s ease",
-          }}
-        >
-          <MessageCircle size={14} color="#25D366" />
-          BOOK ON WHATSAPP
-        </a>
         <a
           href="tel:+97143857200"
           style={{

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   const scrollToServices = () => {
     document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
@@ -98,10 +100,8 @@ const HeroSection = () => {
             justifyContent: "center",
           }}
         >
-          <a
-            href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/book"
             className="w-full sm:w-auto"
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -121,7 +121,7 @@ const HeroSection = () => {
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
             BOOK NOW
-          </a>
+          </Link>
           <button
             onClick={scrollToServices}
             className="w-full sm:w-auto"

@@ -134,38 +134,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop Primary CTA */}
-          <a
-            href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 13,
-              textTransform: "capitalize",
-              letterSpacing: "0.06em",
-              color: "#111111",
-              border: "none",
-              background: "#C9A96E",
-              padding: "10px 22px",
-              textDecoration: "none",
-              transition: "filter 0.2s ease",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 0,
-              borderRadius: 5,
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.filter = "brightness(1.04)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.filter = "brightness(1)";
-            }}
-          >
-            BOOK ON WHATSAPP
-          </a>
-
           {/* Mobile Menu Icon */}
           <button
             className="md:hidden"
@@ -234,29 +202,6 @@ const Navbar = () => {
             {link.label}
           </a>
         ))}
-
-        <a
-          href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            marginTop: 24,
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 13,
-            textTransform: "capitalize",
-            letterSpacing: "0.06em",
-            color: "#111111",
-            background: "#C9A96E",
-            padding: "16px 40px",
-            textDecoration: "none",
-            borderRadius: 5,
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 0,
-          }}
-        >
-          BOOK ON WHATSAPP
-        </a>
       </div>
     </>
   );

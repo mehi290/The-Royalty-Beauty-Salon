@@ -29,7 +29,6 @@ import {
 } from "@/data/bookingCatalog";
 import { getStylistById, stylists } from "@/data/stylists";
 
-const WA = "971503857200";
 const gold = "#C9A96E";
 
 const iconMap: Record<BookingIconKey, React.ReactNode> = {
@@ -136,24 +135,8 @@ const BookingPage = () => {
 
   const phoneValid = phone.replace(/\D/g, "").length >= 8;
 
-  const buildWhatsAppUrl = () => {
-    const sty = selectedStylist?.name ?? "";
-    const d = dateIso ? new Date(dateIso + "T12:00:00") : null;
-    const dateStr = d ? formatDateShort(d) : "";
-    const body = [
-      `Hi Velour! I'd like to book:`,
-      `Service: ${serviceDisplayLabel}`,
-      `Stylist: ${sty}`,
-      `Date: ${dateStr}`,
-      `Time: ${time}`,
-      `Phone: ${phone}`,
-    ].join("\n");
-    return `https://wa.me/${WA}?text=${encodeURIComponent(body)}`;
-  };
-
   const handleConfirm = () => {
     if (!phoneValid || !hasValidServiceSelection || !selectedStylist || !dateIso || !time) return;
-    window.open(buildWhatsAppUrl(), "_blank", "noopener,noreferrer");
     setBookingSuccess(true);
   };
 
@@ -212,7 +195,7 @@ const BookingPage = () => {
             Booking request sent
           </h1>
           <p style={{ fontSize: 15, color: "#555", lineHeight: 1.6, margin: "0 0 28px" }}>
-            We opened WhatsApp with your details. Complete the chat to confirm with our team.
+            Thank you. Our team will contact you at the number you provided to confirm your appointment.
           </p>
           <div
             style={{

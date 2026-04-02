@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -200,10 +201,8 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
           >
             {price}
           </span>
-          <a
-            href="https://wa.me/971503857200?text=Hi%20Velour!%20I%20want%20to%20book%20a%20service."
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/book"
             onClick={(e) => e.stopPropagation()}
             style={{
               flexShrink: 0,
@@ -225,7 +224,7 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
             }}
           >
             Quick Book
-          </a>
+          </Link>
         </div>
       </div>
     </div>

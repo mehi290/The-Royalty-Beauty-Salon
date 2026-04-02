@@ -11,7 +11,6 @@ import PricingSection from "@/components/velour/PricingSection";
 import OfferBanner from "@/components/velour/OfferBanner";
 import ContactSection from "@/components/velour/ContactSection";
 import Footer from "@/components/velour/Footer";
-import WhatsAppFloat from "@/components/velour/WhatsAppFloat";
 
 const Index = () => {
   useEffect(() => {
@@ -45,7 +44,6 @@ const Index = () => {
       <OfferBanner />
       <ContactSection />
       <Footer />
-      <WhatsAppFloat />
     </>
   );
 };
