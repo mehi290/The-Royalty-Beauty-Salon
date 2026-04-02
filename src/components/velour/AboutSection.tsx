@@ -61,19 +61,12 @@ const AboutSection = () => (
             community of clients who come to us not just for great hair but for
             the experience.
           </p>
-          <p style={{ marginTop: 16 }}>
+          <p style={{ marginTop: 16, marginBottom: 24 }}>
             From precision cuts to colour transformations and advanced treatments,
             we combine international techniques with products trusted by top
             stylists worldwide.
           </p>
-           </div>
-        <hr
-          style={{
-            border: "none",
-            borderTop: "1px solid #C9A96E",
-            margin: "30px 0",
-          }}
-        />
+        </div>
         <div className="flex flex-wrap" style={{ gap: 10 }}>
           {tags.map((tag) => (
             <span

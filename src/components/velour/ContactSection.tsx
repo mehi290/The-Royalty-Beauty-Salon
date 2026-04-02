@@ -37,9 +37,10 @@ const ContactSection = () => {
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
+            fontSize: 13,
+            fontWeight: 700,
             textTransform: "uppercase",
-            letterSpacing: "0.25em",
+            letterSpacing: "0.22em",
             color: "#C9A96E",
           }}
         >
@@ -128,6 +129,7 @@ const ContactSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
+              fontWeight: 600,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
               background: "#C9A96E",
@@ -149,6 +151,7 @@ const ContactSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
+              fontWeight: 600,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
               color: "#C9A96E",
@@ -171,6 +174,7 @@ const ContactSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
+              fontWeight: 600,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
               color: "#C9A96E",
@@ -200,6 +204,7 @@ const ContactSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
+              fontWeight: 600,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
               color: "#111111",

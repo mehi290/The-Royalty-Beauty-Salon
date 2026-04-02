@@ -6,6 +6,7 @@ const services = [
     price: "From AED 250",
     img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80",
     desc: "Precision cuts tailored to your face shape, texture, and personal style.",
+    video: "/videos/hair cut video.mp4",
   },
   {
     name: "Hair Styling",
@@ -19,6 +20,7 @@ const services = [
     price: "From AED 450",
     img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80",
     desc: "Balayage, ombre, and custom color transformations for rich dimension.",
+    video: "/videos/hair color.mp4",
   },
   {
     name: "Keratin Treatments",
@@ -44,11 +46,12 @@ const services = [
     price: "From AED 35",
     img: "/videos/lashes and brows.jpg",
     desc: "Lash lift, tinting, brow shaping, and lamination for a polished look.",
+    video: "/videos/eye lash.mp4",
   },
   {
     name: "Wax",
     price: "From AED 35",
-    img: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+    img: "/wax image.jpeg",
     desc: "Face and body waxing with gentle products for smooth, long-lasting results.",
   },
   {
@@ -56,6 +59,7 @@ const services = [
     price: "From AED 650",
     img: "https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=600&q=80",
     desc: "Volume, length, and seamless blend extensions customized to your hair goals.",
+    video: "/videos/hair extension.mp4",
   },
 ];
 
@@ -69,13 +73,16 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
       onFocus={() => setHovered(true)}
       onBlur={() => setHovered(false)}
       tabIndex={0}
+      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A96E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF7F2]"
       style={{
         aspectRatio: "3/4",
         position: "relative",
         overflow: "hidden",
         cursor: "pointer",
-        outline: hovered ? "2px solid #C9A96E" : "2px solid transparent",
-        outlineOffset: -2,
+        borderRadius: 14,
+        boxShadow: hovered ? "0 12px 40px rgba(0,0,0,0.18)" : "0 4px 24px rgba(0,0,0,0.08)",
+        outline: "none",
+        transition: "box-shadow 0.35s ease",
       }}
     >
       {video ? (
@@ -91,8 +98,8 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            transform: hovered ? "scale(1.05)" : "scale(1)",
-            transition: "transform 0.4s ease",
+            transform: hovered ? "scale(1.04)" : "scale(1)",
+            transition: "transform 0.5s ease",
           }}
         />
       ) : (
@@ -103,42 +110,30 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            transform: hovered ? "scale(1.05)" : "scale(1)",
-            transition: "transform 0.4s ease",
+            transform: hovered ? "scale(1.04)" : "scale(1)",
+            transition: "transform 0.5s ease",
           }}
         />
       )}
-      {/* Always-visible gradient */}
+      {/* Bottom gradient for readable white text (screenshot style) */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0) 55%)",
+            "linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.25) 42%, rgba(0,0,0,0) 65%)",
+          pointerEvents: "none",
         }}
       />
-      {/* Hover overlay */}
+      {/* Slightly stronger dim on hover */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background: "rgba(17,17,17,0.55)",
+          background: "linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 50%)",
           opacity: hovered ? 1 : 0,
-          transition: "opacity 0.3s ease",
-        }}
-      />
-      {/* Gold top border on hover */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 3,
-          background: "#C9A96E",
-          transform: hovered ? "scaleX(1)" : "scaleX(0)",
-          transformOrigin: "left",
-          transition: "transform 0.3s ease",
+          transition: "opacity 0.35s ease",
+          pointerEvents: "none",
         }}
       />
       {/* Content */}
@@ -148,72 +143,90 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
           bottom: 0,
           left: 0,
           right: 0,
-          padding: "28px 24px",
+          padding: "22px 22px 20px",
           zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          gap: 0,
         }}
       >
         <h3
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 26,
+            fontSize: "clamp(22px, 2.4vw, 28px)",
             color: "white",
             fontWeight: 400,
+            lineHeight: 1.15,
+            letterSpacing: "0.02em",
           }}
         >
           {name}
         </h3>
-        <span
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 12,
-            color: "white",
-            fontWeight: 700,
-            display: "inline-block",
-            marginTop: 6,
-          }}
-        >
-          {price}
-        </span>
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: 13,
-            color: "#E8E0D5",
-            marginTop: 10,
-            lineHeight: 1.6,
+            fontSize: 12,
+            color: "rgba(255,255,255,0.92)",
+            marginTop: 8,
+            lineHeight: 1.5,
+            maxWidth: "100%",
             opacity: hovered ? 1 : 0,
-            maxHeight: hovered ? 64 : 0,
+            maxHeight: hovered ? 48 : 0,
             overflow: "hidden",
-            transform: hovered ? "translateY(0)" : "translateY(8px)",
-            transition: "all 0.3s ease",
+            transform: hovered ? "translateY(0)" : "translateY(6px)",
+            transition: "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease",
           }}
         >
           {desc}
         </p>
-        <a
-          href="https://wa.me/971503857200?text=Hi%20Velour!%20I%20want%20to%20book%20a%20service."
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
           style={{
-            marginTop: hovered ? 12 : 0,
-            display: "inline-block",
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.12em",
-            color: "#111111",
-            textDecoration: "none",
-            background: "#C9A96E",
-            padding: "8px 14px",
-            borderRadius: 10,
-            opacity: hovered ? 1 : 0,
-            transform: hovered ? "translateY(0)" : "translateY(8px)",
-            pointerEvents: hovered ? "auto" : "none",
-            transition: "opacity 0.3s ease, transform 0.3s ease, margin-top 0.3s ease",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            gap: 12,
+            marginTop: 14,
           }}
         >
-          Quick Book
-        </a>
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 12,
+              color: "white",
+              fontWeight: 700,
+              letterSpacing: "0.04em",
+            }}
+          >
+            {price}
+          </span>
+          <a
+            href="https://wa.me/971503857200?text=Hi%20Velour!%20I%20want%20to%20book%20a%20service."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              flexShrink: 0,
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 10,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.14em",
+              color: "white",
+              textDecoration: "none",
+              background: "#C9A96E",
+              padding: "10px 16px",
+              borderRadius: 999,
+              opacity: hovered ? 1 : 0,
+              transform: hovered ? "translateY(0)" : "translateY(6px)",
+              pointerEvents: hovered ? "auto" : "none",
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              boxShadow: "0 4px 14px rgba(0,0,0,0.2)",
+            }}
+          >
+            Quick Book
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -223,7 +236,7 @@ const ServicesSection = () => (
   <section
     id="services"
     className="velour-section"
-    style={{ background: "#FFFFFF", padding: "100px 0" }}
+    style={{ background: "#FAF7F2", padding: "100px 0" }}
   >
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
       {/* Header */}
@@ -231,9 +244,10 @@ const ServicesSection = () => (
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
+            fontSize: 13,
+            fontWeight: 700,
             textTransform: "uppercase",
-            letterSpacing: "0.25em",
+            letterSpacing: "0.22em",
             color: "#C9A96E",
           }}
         >

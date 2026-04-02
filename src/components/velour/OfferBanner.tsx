@@ -36,8 +36,8 @@ const OfferBanner = () => (
           margin: "12px auto 0",
         }}
       >
-        Valid on any service at our Dubai location. No code needed — just mention
-        it when you call or WhatsApp to book.
+        Valid on any service at our Dubai location. No code needed - just mention
+        it while booking.
       </p>
       <div
         className="flex-col sm:flex-row"

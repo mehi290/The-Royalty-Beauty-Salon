@@ -1,93 +1,27 @@
-const essentials = [
-  { service: "Wash, Cut & Blowdry", price: "AED 120" },
-  { service: "Root Touch-Up", price: "AED 180" },
-  { service: "Eyebrow Threading", price: "AED 35" },
-  { service: "Classic Manicure", price: "AED 80" },
-  { service: "Gelish Pedicure", price: "AED 150" },
-  { service: "Lash Tint & Lift", price: "AED 220" },
-];
-const signature = [
-  { service: "Full Hair Colour (L'Oréal)", price: "AED 280" },
-  { service: "Balayage & Toner", price: "AED 650" },
-  { service: "Keratin Treatment", price: "AED 350" },
-  { service: "Gel Mani-Pedi Combo", price: "AED 189" },
-  { service: "Olaplex Treatment", price: "AED 450" },
-  { service: "Lash Lift + Brow Lamination", price: "AED 320" },
-];
-const premium = [
-  { service: "Balayage + Trim + Toner", price: "AED 700" },
-  { service: "Hair Extensions (Full Head)", price: "AED 1,200" },
-  { service: "Bridal Hair & Makeup", price: "AED 2,100" },
-  { service: "Ombré (Short to Long)", price: "AED 600–800" },
-  { service: "Advanced Anti-Ageing Facial", price: "AED 380" },
-  { service: "Full Body Waxing Package", price: "AED 350" },
-];
+import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
+import {
+  Gem,
+  Hand,
+  Heart,
+  Scissors,
+  Sparkles,
+  User,
+  Wind,
+} from "lucide-react";
+import { bookingCategories, type BookingIconKey } from "@/data/bookingCatalog";
 
-const GoldButton = ({ dark }: { dark?: boolean }) => (
-  <a
-    href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "block",
-      textAlign: "center",
-      fontFamily: "'Inter', sans-serif",
-      fontSize: 11,
-      textTransform: "uppercase",
-      letterSpacing: "0.18em",
-      marginTop: 32,
-      padding: "14px 0",
-      borderRadius: 3,
-      textDecoration: "none",
-      transition: "all 0.3s ease",
-      ...(dark
-        ? { background: "#111111", color: "white", border: "none" }
-        : {
-            background: "transparent",
-            color: "#C9A96E",
-            border: "1.5px solid #C9A96E",
-          }),
-    }}
-  >
-    BOOK ON WHATSAPP
-  </a>
-);
+const gold = "#C9A96E";
 
-const LineItem = ({
-  service,
-  price,
-  dark,
-}: {
-  service: string;
-  price: string;
-  dark?: boolean;
-}) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      padding: "12px 0",
-      borderBottom: dark
-        ? "1px solid rgba(0,0,0,0.1)"
-        : "1px solid #222",
-      fontFamily: "'Inter', sans-serif",
-    }}
-  >
-    <span style={{ fontSize: 14, color: dark ? "#111111" : "#E8E0D5" }}>
-      {service}
-    </span>
-    <span
-      style={{
-        fontSize: 13,
-        color: dark ? "rgba(0,0,0,0.7)" : "#C9A96E",
-        whiteSpace: "nowrap",
-        marginLeft: 12,
-      }}
-    >
-      {price}
-    </span>
-  </div>
-);
+const iconMap: Record<BookingIconKey, ReactNode> = {
+  scissors: <Scissors size={18} strokeWidth={1.5} />,
+  sparkles: <Sparkles size={18} strokeWidth={1.5} />,
+  heart: <Heart size={18} strokeWidth={1.5} />,
+  hand: <Hand size={18} strokeWidth={1.5} />,
+  gem: <Gem size={18} strokeWidth={1.5} />,
+  face: <User size={18} strokeWidth={1.5} />,
+  wind: <Wind size={18} strokeWidth={1.5} />,
+};
 
 const PricingSection = () => (
   <section
@@ -96,18 +30,18 @@ const PricingSection = () => (
     style={{ background: "#FFFFFF", padding: "100px 0" }}
   >
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 60 }}>
+      <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: 11,
+            fontSize: 13,
+            fontWeight: 700,
             textTransform: "uppercase",
-            letterSpacing: "0.25em",
-            color: "#C9A96E",
+            letterSpacing: "0.22em",
+            color: gold,
           }}
         >
-          TRANSPARENT PRICING
+          BOOK NOW
         </span>
         <h2
           style={{
@@ -118,7 +52,7 @@ const PricingSection = () => (
             marginTop: 12,
           }}
         >
-          No Hidden Costs. Ever.
+          Reserve Your Experience
         </h2>
         <p
           style={{
@@ -130,174 +64,109 @@ const PricingSection = () => (
             margin: "12px auto 0",
           }}
         >
-          Prices shown are starting prices in AED inclusive of VAT. Final price
-          confirmed at consultation based on hair length and complexity.
+          Book your appointment in just a few steps.
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 0 }}>
-        {/* Essentials */}
-        <div style={{ background: "#1A1A1A", padding: "48px 40px" }}>
-          <div
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: 14 }}>
+        {bookingCategories.map((c) => (
+          <Link
+            key={c.id}
+            to={`/book?category=${encodeURIComponent(c.id)}`}
             style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#C9A96E",
+              display: "flex",
+              alignItems: "center",
+              gap: 14,
+              padding: "14px 16px",
+              textDecoration: "none",
+              border: "1px solid #E8E5E0",
+              borderRadius: 10,
+              background: "#FAFAF9",
+              transition: "border-color 0.2s ease, box-shadow 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = gold;
+              e.currentTarget.style.boxShadow = "0 4px 16px rgba(0,0,0,0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E8E5E0";
+              e.currentTarget.style.boxShadow = "none";
             }}
           >
-            ESSENTIALS
-          </div>
-          <div
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 42,
-              color: "white",
-              marginTop: 8,
-            }}
-          >
-            from AED 80
-          </div>
-          <p
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 13,
-              color: "#888888",
-              marginTop: 8,
-            }}
-          >
-            Quick, quality services for your everyday beauty routine.
-          </p>
-          <hr style={{ border: "none", borderTop: "1px solid #2A2A2A", margin: "28px 0" }} />
-          {essentials.map((item) => (
-            <LineItem key={item.service} {...item} />
-          ))}
-          <GoldButton />
-        </div>
-
-        {/* Signature */}
-        <div style={{ background: "#C9A96E", padding: "48px 40px", position: "relative" }}>
-          <span
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 9,
-              textTransform: "uppercase",
-              background: "white",
-              color: "#111111",
-              padding: "4px 12px",
-              display: "inline-block",
-              letterSpacing: "0.1em",
-              marginBottom: 16,
-            }}
-          >
-            MOST POPULAR
-          </span>
-          <div
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#111111",
-            }}
-          >
-            SIGNATURE
-          </div>
-          <div
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 42,
-              color: "#111111",
-              marginTop: 8,
-            }}
-          >
-            from AED 280
-          </div>
-          <p
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 13,
-              color: "rgba(0,0,0,0.65)",
-              marginTop: 8,
-            }}
-          >
-            Our most loved services, done to perfection.
-          </p>
-          <hr
-            style={{
-              border: "none",
-              borderTop: "1px solid rgba(0,0,0,0.15)",
-              margin: "28px 0",
-            }}
-          />
-          {signature.map((item) => (
-            <LineItem key={item.service} {...item} dark />
-          ))}
-          <GoldButton dark />
-        </div>
-
-        {/* Premium */}
-        <div
-          style={{
-            background: "#1A1A1A",
-            padding: "48px 40px",
-            border: "1px solid #C9A96E",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#C9A96E",
-            }}
-          >
-            PREMIUM
-          </div>
-          <div
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 42,
-              color: "white",
-              marginTop: 8,
-            }}
-          >
-            from AED 700
-          </div>
-          <p
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 13,
-              color: "#888888",
-              marginTop: 8,
-            }}
-          >
-            Full transformations and specialist treatments.
-          </p>
-          <hr style={{ border: "none", borderTop: "1px solid #2A2A2A", margin: "28px 0" }} />
-          {premium.map((item) => (
-            <LineItem key={item.service} {...item} />
-          ))}
-          <GoldButton />
-        </div>
+            <span
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: "50%",
+                background: "#E8DFD0",
+                color: "#5C5346",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              {iconMap[c.icon]}
+            </span>
+            <span style={{ minWidth: 0, textAlign: "left" }}>
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  color: "#111111",
+                }}
+              >
+                {c.title}
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: 13,
+                  color: "#666666",
+                  marginTop: 2,
+                }}
+              >
+                {c.description}
+              </span>
+            </span>
+          </Link>
+        ))}
       </div>
 
-      {/* Disclaimer */}
+      <p
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          fontSize: 13,
+          color: "#666666",
+          textAlign: "center",
+          marginTop: 36,
+        }}
+      >
+        Prefer to chat?{" "}
+        <a
+          href="https://wa.me/971503857200?text=Hi%20Velour!%20I'd%20like%20to%20book%20an%20appointment."
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: gold, fontWeight: 600 }}
+        >
+          Message us on WhatsApp
+        </a>
+      </p>
+
       <p
         style={{
           fontFamily: "'Inter', sans-serif",
           fontSize: 11,
           color: "#555555",
           textAlign: "center",
-          marginTop: 36,
+          marginTop: 16,
           lineHeight: 1.7,
         }}
       >
-        * All prices are starting prices inclusive of VAT. Stylist-level pricing
-        and hair length may affect final cost. Ask us for a free consultation.
+        * All prices are starting prices inclusive of VAT.
       </p>
     </div>
   </section>

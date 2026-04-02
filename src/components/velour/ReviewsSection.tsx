@@ -1,27 +1,39 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
+const gold = "#C5A070";
+const goldMuted = "#C5A47E";
+
 const reviews = [
+  {
+    text: "Velour has completely transformed my hair care routine. The attention to detail and personalized service is unmatched in Dubai. My balayage has never looked better!",
+    name: "Lina Al-Rashid",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    text: "As someone who has tried many salons in Dubai Marina, I can confidently say Velour is in a league of its own. The keratin treatment lasted months longer than anywhere else.",
+    name: "Elena Petrova",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    text: "The bridal package exceeded all my expectations. The team understood exactly what I wanted and made me feel like a princess on my special day. Highly recommend!",
+    name: "Priya Sharma",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+  },
   {
     text: "The membership benefits are incredible value. I love having priority booking and the complimentary treatments. It is my favorite self-care destination.",
     name: "Natalia Volkov",
-    location: "Diamond Member",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
   },
   {
     text: "Every visit feels luxurious and relaxing. The team is attentive, skilled, and always delivers exactly what I ask for. I leave feeling confident every time.",
     name: "Aisha Karim",
-    location: "Gold Member",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
-  },
-  {
-    text: "From hair to nails, every service is top-notch. Booking is smooth, the salon is beautiful, and the stylists truly care about quality and detail.",
-    name: "Priya Rao",
-    location: "Platinum Member",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
   },
 ];
 
@@ -41,17 +53,79 @@ const ReviewsSection = () => {
     <section
       id="reviews"
       className="velour-section"
-      style={{ background: "#ECEAE7", padding: "110px 0" }}
+      style={{
+        background:
+          "radial-gradient(ellipse 55% 40% at 50% 15%, rgba(201,169,110,0.05) 0%, transparent 50%), #FFFFFF",
+        padding: "96px 0 110px",
+      }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
+      <div style={{ maxWidth: 920, margin: "0 auto", padding: "0 24px" }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 13,
+              fontWeight: 700,
+              letterSpacing: "0.28em",
+              textTransform: "uppercase",
+              color: gold,
+              display: "block",
+              marginBottom: 18,
+            }}
+          >
+            Testimonials
+          </span>
+          <h2
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "clamp(34px, 4.5vw, 48px)",
+              fontWeight: 400,
+              color: "#1B2430",
+              lineHeight: 1.15,
+              margin: 0,
+            }}
+          >
+            What Our Clients Say
+          </h2>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              marginTop: 20,
+              flexWrap: "wrap",
+            }}
+          >
+            <div style={{ display: "flex", gap: 3, alignItems: "center" }}>
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={16} color={gold} fill={gold} strokeWidth={0} />
+              ))}
+            </div>
+            <span
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 15,
+                color: "#5C6670",
+              }}
+            >
+              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.9</strong>
+              <span style={{ fontWeight: 400 }}> on Google Reviews</span>
+            </span>
+          </div>
+        </div>
+
+        {/* Carousel */}
         <div
           style={{
             position: "relative",
-            maxWidth: 980,
-            margin: "0 auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            gap: 0,
+            maxWidth: 820,
+            margin: "0 auto",
           }}
         >
           <button
@@ -59,91 +133,89 @@ const ReviewsSection = () => {
             aria-label="Previous testimonial"
             onClick={showPrev}
             style={{
-              width: 44,
-              height: 44,
-              borderRadius: "9999px",
-              border: "1px solid #E0DDD7",
-              background: "#FAFAFA",
-              color: "#666666",
+              width: 46,
+              height: 46,
+              flexShrink: 0,
+              borderRadius: "50%",
+              border: "1px solid rgba(0,0,0,0.06)",
+              background: "#FFFFFF",
+              color: "#6B6B6B",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              position: "absolute",
-              left: 12,
-              top: "50%",
-              transform: "translateY(-50%)",
+              cursor: "pointer",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+              zIndex: 2,
+              marginRight: -12,
             }}
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={20} strokeWidth={1.5} />
           </button>
 
           <article
             style={{
-              background: "#F7F7F6",
-              border: "1px solid #DBD8D2",
-              borderRadius: 14,
-              width: "100%",
-              padding: "36px 34px",
+              flex: 1,
+              background: "#FFFFFF",
+              borderRadius: 18,
+              padding: "48px 44px 52px",
               textAlign: "center",
-              minHeight: 335,
+              boxShadow: "0 12px 48px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)",
+              minHeight: 380,
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              position: "relative",
+              zIndex: 1,
             }}
           >
             <img
               src={activeReview.image}
-              alt={activeReview.name}
+              alt=""
               style={{
-                width: 82,
-                height: 82,
+                width: 88,
+                height: 88,
                 borderRadius: "50%",
                 objectFit: "cover",
-                margin: "0 auto",
-                border: "3px solid #D7C39B",
+                border: `2px solid ${gold}`,
+                boxShadow: `0 0 0 3px #FFFFFF, 0 0 0 5px rgba(197,160,112,0.35)`,
+                position: "relative",
+                zIndex: 1,
               }}
             />
 
-            <div style={{ display: "flex", gap: 4, justifyContent: "center", marginTop: 16 }}>
+            <div style={{ display: "flex", gap: 4, justifyContent: "center", marginTop: 18 }}>
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={14} color="#C9A96E" fill="#C9A96E" />
+                <Star key={i} size={15} color={gold} fill={gold} strokeWidth={0} />
               ))}
             </div>
 
             <p
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: "clamp(21px, 2.2vw, 34px)",
-                lineHeight: 1.45,
-                color: "#222222",
-                maxWidth: 760,
-                margin: "18px auto 0 auto",
+                fontSize: 18,
+                fontWeight: 400,
+                lineHeight: 1.75,
+                color: "#333333",
+                maxWidth: 620,
+                margin: "22px auto 0",
               }}
             >
-              "{activeReview.text}"
+              &ldquo;{activeReview.text}&rdquo;
             </p>
 
-            <div style={{ marginTop: 18 }}>
-              <div
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: 32,
-                  color: "#2E2E2E",
-                  lineHeight: 1.1,
-                }}
-              >
-                {activeReview.name}
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 18,
-                  color: "#8D7A55",
-                }}
-              >
-                {activeReview.location}
-              </div>
-            </div>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: 26,
+                fontWeight: 500,
+                color: "#1A1A1A",
+                margin: "28px 0 0",
+                lineHeight: 1.2,
+              }}
+            >
+              {activeReview.name}
+            </p>
           </article>
 
           <button
@@ -151,23 +223,101 @@ const ReviewsSection = () => {
             aria-label="Next testimonial"
             onClick={showNext}
             style={{
-              width: 44,
-              height: 44,
-              borderRadius: "9999px",
-              border: "1px solid #E0DDD7",
-              background: "#FAFAFA",
-              color: "#666666",
+              width: 46,
+              height: 46,
+              flexShrink: 0,
+              borderRadius: "50%",
+              border: "1px solid rgba(0,0,0,0.06)",
+              background: "#FFFFFF",
+              color: "#6B6B6B",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              position: "absolute",
-              right: 12,
-              top: "50%",
-              transform: "translateY(-50%)",
+              cursor: "pointer",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+              zIndex: 2,
+              marginLeft: -12,
             }}
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={20} strokeWidth={1.5} />
           </button>
+        </div>
+
+        {/* Pagination */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 8,
+            marginTop: 28,
+          }}
+        >
+          {reviews.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to testimonial ${i + 1}`}
+              aria-current={i === activeIndex}
+              onClick={() => setActiveIndex(i)}
+              style={{
+                width: i === activeIndex ? 28 : 8,
+                height: 8,
+                borderRadius: i === activeIndex ? 4 : "50%",
+                border: "none",
+                padding: 0,
+                background: i === activeIndex ? goldMuted : "#D4D0C8",
+                cursor: "pointer",
+                transition: "width 0.25s ease, background 0.2s ease",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Verified Reviews */}
+        <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 12,
+              background: "#FFFFFF",
+              padding: "12px 22px",
+              borderRadius: 999,
+              border: "1px solid rgba(0,0,0,0.06)",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 13,
+              color: "#4A5560",
+            }}
+          >
+            <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden>
+                <path
+                  fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
+              </svg>
+              <span style={{ fontWeight: 500 }}>Verified Reviews</span>
+            </span>
+            <span style={{ width: 1, height: 18, background: "#E2E0DC" }} aria-hidden />
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <Star size={16} color={gold} fill={gold} strokeWidth={0} />
+              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.9</strong>
+            </span>
+          </div>
         </div>
       </div>
     </section>
