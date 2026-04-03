@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const OfferBanner = () => (
   <section
     className="velour-section"
@@ -46,13 +48,40 @@ const OfferBanner = () => (
           marginTop: 32,
         }}
       >
+        <Link
+          to="/book"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 11,
+            fontWeight: 700,
+            letterSpacing: "0.12em",
+            background: "#111111",
+            color: "white",
+            padding: "15px 36px",
+            textDecoration: "none",
+            border: "none",
+            borderRadius: 3,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "filter 0.2s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.filter = "brightness(1.12)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.filter = "brightness(1)";
+          }}
+        >
+          Book Now
+        </Link>
         <a
           href="tel:+97143857200"
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
+            fontWeight: 700,
+            letterSpacing: "0.12em",
             background: "transparent",
             color: "white",
             padding: "15px 36px",
@@ -65,7 +94,7 @@ const OfferBanner = () => (
             transition: "all 0.3s ease",
           }}
         >
-          CALL TO BOOK
+          Call Salon
         </a>
       </div>
     </div>

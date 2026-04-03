@@ -1,21 +1,7 @@
-import { useState } from "react";
-import { MapPin, Phone, Clock, MessageCircle, ExternalLink } from "lucide-react";
-
-const salonAddress = "Velour Salon, Shop 12, Al Wasl Road, Jumeirah 1, Dubai, UAE";
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const [copied, setCopied] = useState(false);
-
-  const copyAddress = async () => {
-    try {
-      await navigator.clipboard.writeText(salonAddress);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(false);
-    }
-  };
-
+  const salonAddress = "Velour Salon, shop 12, Al Wasl Road, Dubai";
   return (
     <section
     id="contact"
@@ -103,24 +89,12 @@ const ContactSection = () => {
             </div>
           ))}
         </div>
-        <div
-          style={{
-            marginTop: 28,
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 13,
-            color: "#5A5A5A",
-            lineHeight: 1.8,
-          }}
-        >
-          <p>Nearest landmark: Al Wasl Road, Jumeirah 1.</p>
-          <p>Parking: street and paid parking available nearby.</p>
-          <p>Nearest metro: Business Bay (short taxi ride).</p>
-        </div>
 
-        {/* Buttons */}
-        <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+        <div style={{ marginTop: 32 }}>
           <a
-            href="tel:+97143857200"
+            href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11,
@@ -133,66 +107,13 @@ const ContactSection = () => {
               textDecoration: "none",
               borderRadius: 3,
               transition: "background 0.3s ease",
+              display: "inline-block",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
           >
-            CALL SALON
+            Get directions
           </a>
-          <a
-            href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              color: "#C9A96E",
-              border: "1.5px solid #C9A96E",
-              background: "transparent",
-              padding: "14px 32px",
-              textDecoration: "none",
-              borderRadius: 3,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#C9A96E";
-              e.currentTarget.style.color = "#111111";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#C9A96E";
-            }}
-          >
-            GET DIRECTIONS <ExternalLink size={14} />
-          </a>
-          <button
-            onClick={copyAddress}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              color: "#111111",
-              background: "#E8E0D5",
-              border: "1.5px solid #D7CCBE",
-              padding: "14px 32px",
-              textDecoration: "none",
-              borderRadius: 3,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              cursor: "pointer",
-            }}
-          >
-            {copied ? "Address copied" : "Copy address"}
-          </button>
         </div>
       </div>
 
