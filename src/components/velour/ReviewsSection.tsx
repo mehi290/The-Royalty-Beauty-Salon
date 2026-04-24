@@ -6,13 +6,13 @@ const goldMuted = "#C5A47E";
 
 const reviews = [
   {
-    text: "Velour has completely transformed my hair care routine. The attention to detail and personalized service is unmatched in Dubai. My balayage has never looked better!",
+    text: "Tres Beauty Lounge has completely transformed my hair care routine. The attention to detail and personalized service is unmatched in Dubai. My balayage has never looked better!",
     name: "Lina Al-Rashid",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "As someone who has tried many salons in Dubai Marina, I can confidently say Velour is in a league of its own. The keratin treatment lasted months longer than anywhere else.",
+    text: "As someone who has tried many salons in Dubai Marina, I can confidently say Tres Beauty Lounge is in a league of its own. The keratin treatment lasted months longer than anywhere else.",
     name: "Elena Petrova",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",

@@ -24,7 +24,7 @@ const OfferBanner = () => (
           lineHeight: 1.15,
         }}
       >
-        New to Velour? Enjoy 20% Off Your First Visit
+        New to Tres Beauty Lounge? Enjoy 20% Off Your First Visit
       </h2>
       <p
         style={{

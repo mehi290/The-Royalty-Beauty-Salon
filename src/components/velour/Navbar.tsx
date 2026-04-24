@@ -92,19 +92,21 @@ const Navbar = () => {
             height: 68,
           }}
         >
-          {/* Logo */}
-          <div>
-            <div
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 28,
-                color: "white",
-                letterSpacing: "0.22em",
-                lineHeight: 1,
-              }}
-            >
-              VELOUR
-            </div>
+          <div
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: 28,
+              color: "white",
+              letterSpacing: "0.22em",
+              lineHeight: 1,
+              opacity: scrolled ? 1 : 0,
+              transition: "opacity 0.25s ease",
+              pointerEvents: "none",
+              userSelect: "none",
+            }}
+            aria-hidden={!scrolled}
+          >
+            TRES BEAUTY LOUNGE
           </div>
 
           {/* Desktop Nav Links */}

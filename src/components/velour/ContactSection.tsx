@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const salonAddress = "Velour Salon, shop 12, Al Wasl Road, Dubai";
+  const salonAddress = "Tres Beauty Lounge, shop 12, Al Wasl Road, Dubai";
   return (
     <section
     id="contact"
@@ -41,7 +41,7 @@ const ContactSection = () => {
             marginTop: 12,
           }}
         >
-          Visit Velour Salon Dubai
+          Visit Tres Beauty Lounge Dubai
         </h2>
 
         <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
         <div style={{ marginTop: 32 }}>
           <a
-            href="https://maps.google.com/?q=Velour+Salon+Jumeirah+1+Dubai"
+            href="https://maps.google.com/?q=Tres+Beauty+Lounge+Jumeirah+1+Dubai"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -128,8 +128,8 @@ const ContactSection = () => {
         }}
       >
         <iframe
-          title="Velour Salon Dubai map"
-          src="https://www.google.com/maps?q=Velour+Salon+Jumeirah+1+Dubai&output=embed"
+          title="Tres Beauty Lounge Dubai map"
+          src="https://www.google.com/maps?q=Tres+Beauty+Lounge+Jumeirah+1+Dubai&output=embed"
           style={{
             width: "100%",
             height: "100%",

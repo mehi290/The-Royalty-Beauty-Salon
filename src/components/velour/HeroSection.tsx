@@ -1,3 +1,4 @@
+import { Facebook, Instagram, MessageCircle, Music2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -70,7 +71,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          When Beauty Meets Artistry
+          Welcome to Tres&nbsp;Beauty&nbsp;Lounge
         </h1>
 
         {/* Subheading */}
@@ -150,6 +151,74 @@ const HeroSection = () => {
             EXPLORE SERVICES
           </button>
         </div>
+      </div>
+
+      {/* Social Rail */}
+      <div
+        style={{
+          position: "absolute",
+          left: 22,
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          gap: 16,
+        }}
+      >
+        {[
+          {
+            href: "https://instagram.com",
+            label: "Instagram",
+            bg: "linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)",
+            icon: <Instagram size={20} color="white" strokeWidth={2} />,
+          },
+          {
+            href: "https://wa.me/971503857200",
+            label: "WhatsApp",
+            bg: "#25D366",
+            icon: <MessageCircle size={20} color="white" strokeWidth={2} />,
+          },
+          {
+            href: "https://facebook.com",
+            label: "Facebook",
+            bg: "#1877F2",
+            icon: <Facebook size={20} color="white" strokeWidth={2} />,
+          },
+          {
+            href: "https://tiktok.com",
+            label: "TikTok",
+            bg: "#111111",
+            icon: <Music2 size={20} color="white" strokeWidth={2} />,
+          },
+        ].map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: 1,
+              background: item.bg,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.22)",
+              transition: "transform 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateX(2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateX(0)";
+            }}
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
 
     </section>
