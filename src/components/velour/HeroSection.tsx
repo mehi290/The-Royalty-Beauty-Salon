@@ -160,10 +160,10 @@ const HeroSection = () => {
         rel="noopener noreferrer"
         aria-label="WhatsApp"
         style={{
-          position: "absolute",
+          position: "fixed",
           right: 18,
           bottom: 18,
-          zIndex: 2,
+          zIndex: 1200,
           width: 44,
           height: 44,
           borderRadius: "50%",
