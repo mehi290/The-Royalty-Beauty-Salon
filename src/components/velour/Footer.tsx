@@ -27,7 +27,7 @@ const Footer = () => (
             letterSpacing: "0.2em",
           }}
         >
-          TRES BEAUTY LOUNGE
+          AFRO HAIR SHOW SALON
         </div>
         <div
           style={{
@@ -231,7 +231,7 @@ const Footer = () => (
           color: "#444444",
         }}
       >
-        © 2026 Tres Beauty Lounge Dubai. All Rights Reserved.
+        © 2026 Afro Hair Show Salon Dubai. All Rights Reserved.
       </span>
       <div style={{ display: "flex", gap: 16 }}>
         {["Privacy Policy", "Terms & Conditions"].map((t) => (

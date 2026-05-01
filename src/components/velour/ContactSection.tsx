@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const salonAddress = "Tres Beauty Lounge, shop 12, Al Wasl Road, Dubai";
+  const salonAddress = "Afro Hair Show Salon, shop 12, Al Wasl Road, Dubai";
   return (
     <section
     id="contact"
@@ -41,7 +41,7 @@ const ContactSection = () => {
             marginTop: 12,
           }}
         >
-          Visit Tres Beauty Lounge Dubai
+          Visit Afro Hair Show Salon Dubai
         </h2>
 
         <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
         <div style={{ marginTop: 32 }}>
           <a
-            href="https://maps.google.com/?q=Tres+Beauty+Lounge+Jumeirah+1+Dubai"
+            href="https://maps.google.com/?q=Afro+Hair+Show+Salon+Jumeirah+1+Dubai"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -128,8 +128,8 @@ const ContactSection = () => {
         }}
       >
         <iframe
-          title="Tres Beauty Lounge Dubai map"
-          src="https://www.google.com/maps?q=Tres+Beauty+Lounge+Jumeirah+1+Dubai&output=embed"
+          title="Afro Hair Show Salon Dubai map"
+          src="https://www.google.com/maps?q=Afro+Hair+Show+Salon+Jumeirah+1+Dubai&output=embed"
           style={{
             width: "100%",
             height: "100%",

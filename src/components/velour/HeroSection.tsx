@@ -71,7 +71,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Welcome to Tres&nbsp;Beauty&nbsp;Lounge
+          Welcome to Afro&nbsp;Hair&nbsp;Show&nbsp;Salon
         </h1>
 
         {/* Subheading */}

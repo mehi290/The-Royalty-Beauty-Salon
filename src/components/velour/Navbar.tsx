@@ -106,7 +106,7 @@ const Navbar = () => {
             }}
             aria-hidden={!scrolled}
           >
-            TRES BEAUTY LOUNGE
+            AFRO HAIR SHOW SALON
           </div>
 
           {/* Desktop Nav Links */}

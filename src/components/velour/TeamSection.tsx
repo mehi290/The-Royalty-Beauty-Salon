@@ -142,7 +142,7 @@ const TeamSection = () => (
             margin: "12px auto 0",
           }}
         >
-          Every Tres Beauty Lounge stylist is internationally trained and personally selected
+          Every Afro Hair Show Salon stylist is internationally trained and personally selected
           for their passion for beauty and care for clients.
         </p>
       </div>
