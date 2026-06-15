@@ -315,7 +315,7 @@ const ReviewsSection = () => {
             <span style={{ width: 1, height: 18, background: "#E2E0DC" }} aria-hidden />
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <Star size={16} color={gold} fill={gold} strokeWidth={0} />
-              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.9</strong>
+              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.5</strong>
             </span>
           </div>
         </div>
