@@ -120,15 +120,13 @@ const Navbar = () => {
                   handleNavClick(link.href);
                 }}
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 13,
-                  fontWeight: 400,
-                  textTransform: "none",
-                  letterSpacing: "0.06em",
-                  color: "#E8E0D5",
+                  padding: link.label === "Book Now" ? "12px 24px" : "0",
+                  background: link.label === "Book Now" ? "#E8E0D5" : "transparent",
+                  color: link.label === "Book Now" ? "#1A1A1A" : "#E8E0D5",
+                  borderRadius: link.label === "Book Now" ? "6px" : "0",
+                  fontWeight: link.label === "Book Now" ? "700" : "500",
                   textDecoration: "none",
-                  transition: "opacity 0.2s ease",
-                  opacity: 0.95,
+                  transition: "all 0.3s ease",
                 }}
               >
                 {link.label}
