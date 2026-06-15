@@ -67,8 +67,8 @@ const ContactSection = () => {
                 text: (
                   <>
                     Mobile:{" "}
-                    <a href="tel:+971503857200" style={{ color: "#3D3D3D", textDecoration: "none" }}>
-                      +971 50 385 7200
+                    <a href="tel:+971503727980" style={{ color: "#3D3D3D", textDecoration: "none" }}>
+                      +971 50 3727 980
                     </a>
                   </>
                 ),
@@ -129,7 +129,7 @@ const ContactSection = () => {
         >
           <iframe
             title="Ash Beauty Dubai map"
-            src="https:https://www.google.com/maps/place/Ash+Beauty+Dubai/@25.0521476,55.2152374,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6dc99c6b50a3:0x20e41d1b92a04c5c!8m2!3d25.0521476!4d55.2152374!16s%2Fg%2F11vlspmtwq?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D&output=embed"
+            src="https://www.google.com/maps/place/Ash+Beauty+Dubai/@25.0521476,55.2152374,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6dc99c6b50a3:0x20e41d1b92a04c5c!8m2!3d25.0521476!4d55.2152374!16s%2Fg%2F11vlspmtwq?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D&output=embed"
             style={{
               width: "100%",
               height: "100%",
