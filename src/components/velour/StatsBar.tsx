@@ -1,8 +1,8 @@
 const stats = [
-  { value: "15+", label: "Expert Stylists" },
-  { value: "5,000+", label: "Happy Clients" },
-  { value: "10 Yrs", label: "Serving Dubai" },
-  { value: "4.9 ★", label: "Google Rating" },
+  { value: "4.5 ★", label: "Google Rating" },
+  { value: "84+", label: "Google Reviews" },
+  { value: "500+", label: "Satisfied Clients" },
+  { value: "JVC ★", label: "DUBAI" },
 ];
 
 const StatsBar = () => (
@@ -14,9 +14,8 @@ const StatsBar = () => (
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className={`flex flex-col items-center justify-center py-3 md:py-0 ${
-            i < 3 ? "md:border-r" : ""
-          }`}
+          className={`flex flex-col items-center justify-center py-3 md:py-0 ${i < 3 ? "md:border-r" : ""
+            }`}
           style={{
             borderColor: "rgba(255,255,255,0.35)",
           }}

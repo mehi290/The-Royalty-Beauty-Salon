@@ -86,7 +86,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Luxury hair and beauty treatments tailored to your style, schedule, and hair type.
+          Luxury hair and beauty treatments
         </p>
 
         {/* Buttons */}
