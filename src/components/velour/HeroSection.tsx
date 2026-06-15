@@ -123,33 +123,6 @@ const HeroSection = () => {
           >
             BOOK NOW
           </Link>
-          <button
-            onClick={scrollToServices}
-            className="w-full sm:w-auto"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              background: "#ffffff",
-              color: "#111111",
-              padding: "16px 40px",
-              border: "1.5px solid rgba(0,0,0,0.2)",
-              cursor: "pointer",
-              borderRadius: 3,
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#f4f4f4";
-              e.currentTarget.style.color = "#111111";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#ffffff";
-              e.currentTarget.style.color = "#111111";
-            }}
-          >
-            EXPLORE SERVICES
-          </button>
         </div>
       </div>
 
