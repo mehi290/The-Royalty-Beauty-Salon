@@ -92,7 +92,7 @@ const ContactSection = () => {
 
           <div style={{ marginTop: 32 }}>
             <a
-              href="https://maps.google.com/?q=Afro+Hair+Show+Salon+Jumeirah+1+Dubai"
+              href="https://maps.google.com/?q=Rose+1+Emirates+Gardens+JVC+District+12+Dubai"
               target="_blank"
               rel="noopener noreferrer"
               style={{

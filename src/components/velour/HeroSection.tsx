@@ -56,7 +56,7 @@ const HeroSection = () => {
           padding: "0 20px",
           textAlign: "center",
         }}
-      >     
+      >
 
         {/* Main Heading */}
         <h1
@@ -71,7 +71,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Welcome to Afro&nbsp;Hair&nbsp;Show&nbsp;Salon
+          Welcome to Ash&nbsp;&nbsp;Beauty
         </h1>
 
         {/* Subheading */}
