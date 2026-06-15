@@ -106,7 +106,7 @@ const Navbar = () => {
             }}
             aria-hidden={!scrolled}
           >
-            AFRO HAIR SHOW SALON
+            Ash Beauty
           </div>
 
           {/* Desktop Nav Links */}

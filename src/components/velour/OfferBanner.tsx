@@ -24,21 +24,8 @@ const OfferBanner = () => (
           lineHeight: 1.15,
         }}
       >
-        New to Afro Hair Show Salon? Enjoy 20% Off Your First Visit
+        Ready For Your Next Beauty Appointment?
       </h2>
-      <p
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: 14,
-          color: "rgba(255,255,255,0.85)",
-          marginTop: 12,
-          maxWidth: 560,
-          margin: "12px auto 0",
-        }}
-      >
-        Valid on any service at our Dubai location. No code needed - just mention
-        it while booking.
-      </p>
       <div
         className="flex-col sm:flex-row"
         style={{

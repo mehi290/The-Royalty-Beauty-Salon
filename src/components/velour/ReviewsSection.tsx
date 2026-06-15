@@ -6,32 +6,32 @@ const goldMuted = "#C5A47E";
 
 const reviews = [
   {
-    text: "Afro Hair Show Salon has completely transformed my hair care routine. The attention to detail and personalized service is unmatched in Dubai. My balayage has never looked better!",
-    name: "Lina Al-Rashid",
+    text: "I visited Ash Beauty Dubai (JVC) for a full hair color and requested a bleach free option. The customer service is amazing they reply quickly, welcome you warmly, listen to your needs, and respect your privacy. I had an appointment, but you can also walk in. The reception girl and all the staff are super friendly. My hairstylist, Selfa, did a fantastic job and was very patient with me. It’s my first time at this salon and I loved the interior aesthetic very chic and welcoming. They offer other services too, and you can easily reach out to them with questions. Highly recommend!",
+    name: "Shey",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "As someone who has tried many salons in Dubai Marina, I can confidently say Afro Hair Show Salon is in a league of its own. The keratin treatment lasted months longer than anywhere else.",
-    name: "Elena Petrova",
+    text: "Would like to recommend this beautiful salon. Special thanks to master Rachel, who does good, professional pedicure and amazing feet massage, also receptionist lady who is ready to go an extra mile for the clients. Thank you!",
+    name: "Hanna",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "The bridal package exceeded all my expectations. The team understood exactly what I wanted and made me feel like a princess on my special day. Highly recommend!",
-    name: "Priya Sharma",
+    text: "I had an absolutely wonderful experience at Ash Beauty Salon! From the moment I walked in, I was greeted with warmth and professionalism. The ambience of the salon is so calming and elegant — clean, beautifully maintained and filled with a relaxing aroma that instantly makes you feel pampered. I went for a manicure and pedicure session, along with a haircut and threading and each service was done with such care and attention to detail.",
+    name: "Shaista Yousuf",
     image:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "The membership benefits are incredible value. I love having priority booking and the complimentary treatments. It is my favorite self-care destination.",
-    name: "Natalia Volkov",
+    text: "Best hair service with the best staff! ❤️ Had my keratin done at Ash Beauty Lounge and honestly, it was the best I had. Top-notched customer service from booking, to the reception and up to the hairdresser. I really appreciate that they have to adjust on an earlier timing just to accommodate me (without even asking). Special thanks to Selfa, she's so kind, so professional, and her hands are incredibly gentle — the whole experience felt relaxing and pampering. Worth every penny! I super love the haircut she gave me, exactly what I wanted! My hair feels smooth, healthy, and looks beautiful. Thank you so much, Selfa & to Ash Beauty team, tried so many salons inside and outside JVC but you guys are just incredible. Can’t recommend it enough! I will definitely come back.",
+    name: "Stephanie Singian",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "Every visit feels luxurious and relaxing. The team is attentive, skilled, and always delivers exactly what I ask for. I leave feeling confident every time.",
-    name: "Aisha Karim",
+    text: "the best— most elegant salon i have ever been, and I’m not even exaggerating! go see for yourself. clean, fancy and luxurious, not to mention the best customer service provided by its employees! worth ever penny, to be precise. will be visiting more often! not to mention, the place smells fantabulous! 5 stars are not enough!✨🌟✨🌟✨.",
+    name: "Maria Volfango",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
   },
