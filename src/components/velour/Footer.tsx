@@ -192,10 +192,10 @@ const Footer = () => (
             lineHeight: 2.2,
           }}
         >
-          <p>Al Wasl Road, Jumeirah 1</p>
+          <p>Rose 1 Emirates Gardens - JVC district 12 - Dubai</p>
           <p>Dubai, UAE</p>
-          <p>+971 4 385 7200</p>
-          <p>hello@veloursalon.ae</p>
+          <p>+971 50372 7980</p>
+          <p>hello@ashbeautysalon.ae</p>
           <p>Mon–Sat: 9am – 9pm</p>
         </div>
       </div>

@@ -128,7 +128,7 @@ const HeroSection = () => {
 
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/971503857200"
+        href="https://wa.me/971503727980"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
