@@ -96,6 +96,7 @@ const Navbar = () => {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(16px, 2.2vw, 22px)",
+              fontWeight: "700",
               color: "white",
               letterSpacing: "0.15em",
               lineHeight: 1.2,

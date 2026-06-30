@@ -86,10 +86,10 @@ const StatsBar = () => (
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className={`flex flex-col items-center justify-center py-3 sm:py-0 ${i < 2 ? "sm:border-r" : ""
+          className={`flex flex-col items-center justify-center py-4 sm:py-0 ${i < 2 ? "border-b sm:border-b-0 sm:border-r" : ""
             }`}
           style={{
-            borderColor: "rgba(255,255,255,0.35)",
+            borderColor: "rgba(255,255,255,0.3)",
           }}
         >
           <span
