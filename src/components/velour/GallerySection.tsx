@@ -2,6 +2,16 @@ import { useCallback, useLayoutEffect, useRef, useState } from "react";
 
 const transformations = [
   {
+    title: "Hair Treatment",
+    subtitle: "Stunning before and after results",
+    video: "/before and after.mp4",
+  },
+  {
+    title: "Hair Styling",
+    subtitle: "Premium styling transformations",
+    video: "/our work the royal.mp4",
+  },
+  {
     title: "Balayage Transformation",
     subtitle: "From blonde ombre to stunning ash balayage",
     beforeImage: "/hair color after  before.jpeg",
@@ -252,9 +262,33 @@ const TransformationCard = ({
   combinedImage,
   wideCombinedImage,
   combinedAspectRatio,
+  video,
 }: (typeof transformations)[0]) => (
   <article>
-    {combinedImage ? (
+    {video ? (
+      <div
+        style={{
+          width: "100%",
+          aspectRatio: "1 / 1",
+          borderRadius: 14,
+          overflow: "hidden",
+          background: "#1a1a1a",
+        }}
+      >
+        <video
+          src={video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+    ) : combinedImage ? (
       <div
         style={{
           width: "100%",
@@ -282,8 +316,8 @@ const TransformationCard = ({
       </div>
     ) : (
       <BeforeAfterSlider
-        beforeImage={beforeImage}
-        afterImage={afterImage}
+        beforeImage={beforeImage ?? ""}
+        afterImage={afterImage ?? ""}
         title={title}
       />
     )}

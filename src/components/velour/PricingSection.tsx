@@ -146,8 +146,8 @@ const PricingSection = () => (
         }}
       >
         Prefer to call?{" "}
-        <a href="tel:+9710503727980" style={{ color: gold, fontWeight: 600 }}>
-          +971503727980       </a>
+        <a href="tel:+971564629378" style={{ color: gold, fontWeight: 600 }}>
+          0564629378       </a>
       </p>
 
       <p

@@ -56,7 +56,7 @@ const AboutSection = () => (
           }}
         >
           <p>
-            Ash Beauty has been part of Dubai's beauty scene for over a decade.
+            The Royalty Beauty Salon has been part of Dubai's beauty scene for over a decade.
             Nestled in the vibrant heart of the city, we've built a loyal
             community of clients who come to us not just for great hair but for
             the experience.

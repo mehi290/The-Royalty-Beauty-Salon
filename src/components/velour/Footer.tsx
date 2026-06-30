@@ -27,7 +27,7 @@ const Footer = () => (
             letterSpacing: "0.2em",
           }}
         >
-          Ash Beauty
+          The Royalty Beauty Salon
         </div>
         <div
           style={{
@@ -192,10 +192,10 @@ const Footer = () => (
             lineHeight: 2.2,
           }}
         >
-          <p>Rose 1 Emirates Gardens - JVC district 12 - Dubai</p>
+          <p>KW-251, Al Wasl Building (R405) - Shop. 1 35th St - Metro Station - near ADCB - Al Karama - Dubai</p>
           <p>Dubai, UAE</p>
-          <p>+971 50372 7980</p>
-          <p>hello@ashbeautysalon.ae</p>
+          <p>0564629378</p>
+          <p>hello@theroyaltybeautysalon.ae</p>
           <p>Mon–Sat: 9am – 9pm</p>
         </div>
       </div>
@@ -231,7 +231,7 @@ const Footer = () => (
           color: "#444444",
         }}
       >
-        © 2026 Ash Beauty Dubai. All Rights Reserved.
+        © 2026 The Royalty Beauty Salon Dubai. All Rights Reserved.
       </span>
       <div style={{ display: "flex", gap: 16 }}>
         {["Privacy Policy", "Terms & Conditions"].map((t) => (

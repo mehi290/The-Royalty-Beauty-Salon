@@ -71,7 +71,7 @@ const HeroSection = () => {
             marginTop: 20,
           }}
         >
-          Welcome to Ash&nbsp;&nbsp;Beauty
+          Welcome to The Royalty Beauty Salon
         </h1>
 
         {/* Subheading */}
@@ -128,7 +128,7 @@ const HeroSection = () => {
 
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/971503727980"
+        href="https://wa.me/971564629378"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"

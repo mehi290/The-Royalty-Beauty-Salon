@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
+    name: "Blow Dry",
+    price: "From AED 120",
+    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+    desc: "Professional blow-dry and styling for a flawless, voluminous look.",
+    video: "/blow dry service.mp4",
+  },
+  {
     name: "Hair Cut",
     price: "From AED 250",
     img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80",
@@ -28,7 +35,7 @@ const services = [
     price: "From AED 800",
     img: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
     desc: "Keratin smoothing, Olaplex, hair botox and deep conditioning. From AED 350.",
-    video: "/videos/keratin.mp4",
+    video: "/keratin treatment.mp4",
   },
   {
     name: "Nail Artistry",

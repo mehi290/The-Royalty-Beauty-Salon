@@ -106,7 +106,7 @@ const Navbar = () => {
             }}
             aria-hidden={!scrolled}
           >
-            Ash Beauty
+            The Royalty Beauty Salon
           </div>
 
           {/* Desktop Nav Links */}

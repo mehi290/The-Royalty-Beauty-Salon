@@ -142,7 +142,7 @@ const TeamSection = () => (
             margin: "12px auto 0",
           }}
         >
-          Every Ash Beauty Salon stylist is internationally trained and personally selected
+          Every stylist at The Royalty Beauty Salon is internationally trained and personally selected
           for their passion for beauty and care for clients.
         </p>
       </div>

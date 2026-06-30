@@ -6,7 +6,7 @@ const goldMuted = "#C5A47E";
 
 const reviews = [
   {
-    text: "I visited Ash Beauty Dubai (JVC) for a full hair color and requested a bleach free option. The customer service is amazing they reply quickly, welcome you warmly, listen to your needs, and respect your privacy. I had an appointment, but you can also walk in. The reception girl and all the staff are super friendly. My hairstylist, Selfa, did a fantastic job and was very patient with me. It’s my first time at this salon and I loved the interior aesthetic very chic and welcoming. They offer other services too, and you can easily reach out to them with questions. Highly recommend!",
+    text: "I visited The Royalty Beauty Salon Dubai (Al Karama) for a full hair color and requested a bleach free option. The customer service is amazing they reply quickly, welcome you warmly, listen to your needs, and respect your privacy. I had an appointment, but you can also walk in. The reception girl and all the staff are super friendly. My hairstylist, Selfa, did a fantastic job and was very patient with me. It’s my first time at this salon and I loved the interior aesthetic very chic and welcoming. They offer other services too, and you can easily reach out to them with questions. Highly recommend!",
     name: "Shey",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -18,13 +18,13 @@ const reviews = [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "I had an absolutely wonderful experience at Ash Beauty Salon! From the moment I walked in, I was greeted with warmth and professionalism. The ambience of the salon is so calming and elegant — clean, beautifully maintained and filled with a relaxing aroma that instantly makes you feel pampered. I went for a manicure and pedicure session, along with a haircut and threading and each service was done with such care and attention to detail.",
+    text: "I had an absolutely wonderful experience at The Royalty Beauty Salon! From the moment I walked in, I was greeted with warmth and professionalism. The ambience of the salon is so calming and elegant — clean, beautifully maintained and filled with a relaxing aroma that instantly makes you feel pampered. I went for a manicure and pedicure session, along with a haircut and threading and each service was done with such care and attention to detail.",
     name: "Shaista Yousuf",
     image:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
   },
   {
-    text: "Best hair service with the best staff! ❤️ Had my keratin done at Ash Beauty Lounge and honestly, it was the best I had. Top-notched customer service from booking, to the reception and up to the hairdresser. I really appreciate that they have to adjust on an earlier timing just to accommodate me (without even asking). Special thanks to Selfa, she's so kind, so professional, and her hands are incredibly gentle — the whole experience felt relaxing and pampering. Worth every penny! I super love the haircut she gave me, exactly what I wanted! My hair feels smooth, healthy, and looks beautiful. Thank you so much, Selfa & to Ash Beauty team, tried so many salons inside and outside JVC but you guys are just incredible. Can’t recommend it enough! I will definitely come back.",
+    text: "Best hair service with the best staff! ❤️ Had my keratin done at The Royalty Beauty Salon and honestly, it was the best I had. Top-notched customer service from booking, to the reception and up to the hairdresser. I really appreciate that they have to adjust on an earlier timing just to accommodate me (without even asking). Special thanks to Selfa, she's so kind, so professional, and her hands are incredibly gentle — the whole experience felt relaxing and pampering. Worth every penny! I super love the haircut she gave me, exactly what I wanted! My hair feels smooth, healthy, and looks beautiful. Thank you so much, Selfa & to The Royalty Beauty Salon team, tried so many salons inside and outside Al Karama but you guys are just incredible. Can’t recommend it enough! I will definitely come back.",
     name: "Stephanie Singian",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
@@ -315,7 +315,7 @@ const ReviewsSection = () => {
             <span style={{ width: 1, height: 18, background: "#E2E0DC" }} aria-hidden />
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <Star size={16} color={gold} fill={gold} strokeWidth={0} />
-              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.5</strong>
+              <strong style={{ color: "#1B2430", fontWeight: 700 }}>4.9</strong>
             </span>
           </div>
         </div>

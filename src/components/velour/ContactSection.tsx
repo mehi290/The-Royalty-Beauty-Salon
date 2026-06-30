@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const salonAddress = "Ash Beauty, Rose 1 Emirates Gardens - JVC district 12 - Dubai";
+  const salonAddress = "KW-251, Al Wasl Building (R405) - Shop. 1 35th St - Metro Station - near ADCB - Al Karama - Dubai";
   return (
     <section
       id="contact"
@@ -41,7 +41,7 @@ const ContactSection = () => {
               marginTop: 12,
             }}
           >
-            Visit Ash Beauty Dubai
+            Visit The Royalty Beauty Salon
           </h2>
 
           <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
@@ -53,8 +53,8 @@ const ContactSection = () => {
               {
                 icon: <Phone size={20} color="#C9A96E" />,
                 text: (
-                  <a href="tel:+971503727980" style={{ color: "#3D3D3D", textDecoration: "none" }}>
-                    +971 50 372 7980
+                  <a href="tel:+971564629378" style={{ color: "#3D3D3D", textDecoration: "none" }}>
+                    0564629378
                   </a>
                 ),
               },
@@ -67,8 +67,8 @@ const ContactSection = () => {
                 text: (
                   <>
                     Mobile:{" "}
-                    <a href="tel:+971503727980" style={{ color: "#3D3D3D", textDecoration: "none" }}>
-                      +971 50 3727 980
+                    <a href="tel:+971564629378" style={{ color: "#3D3D3D", textDecoration: "none" }}>
+                      0564629378
                     </a>
                   </>
                 ),
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
           <div style={{ marginTop: 32 }}>
             <a
-              href="https://maps.google.com/?q=Rose+1+Emirates+Gardens+JVC+District+12+Dubai"
+              href="https://maps.google.com/?q=KW-251,+Al+Wasl+Building+(R405)+-+Shop.+1+35th+St+-+Metro+Station+-+near+ADCB+-+Al+Karama+-+Dubai"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -128,8 +128,8 @@ const ContactSection = () => {
           }}
         >
           <iframe
-            title="Ash Beauty Dubai map"
-            src="https://www.google.com/maps?q=Ash%20Beauty%20Dubai%20Rose%201%20Emirates%20Gardens%20JVC%20District%2012%20Dubai&output=embed"
+            title="The Royalty Beauty Salon Dubai map"
+            src="https://www.google.com/maps?q=KW-251%20Al%20Wasl%20Building%20R405%20Shop%201%2035th%20St%20Metro%20Station%20near%20ADCB%20Al%20Karama%20Dubai&output=embed"
             style={{
               width: "100%",
               height: "100%",
