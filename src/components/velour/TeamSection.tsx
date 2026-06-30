@@ -43,7 +43,7 @@ const TeamCard = ({ img, name, title, bio }: (typeof team)[0]) => {
           objectFit: "cover",
           margin: "0 auto",
           display: "block",
-          outline: hovered ? "2px solid #C9A96E" : "2px solid transparent",
+          outline: hovered ? "2px solid #9F3F5C" : "2px solid transparent",
           outlineOffset: 6,
           transition: "outline 0.3s ease",
         }}
@@ -65,7 +65,7 @@ const TeamCard = ({ img, name, title, bio }: (typeof team)[0]) => {
           fontSize: 10,
           textTransform: "uppercase",
           letterSpacing: "0.2em",
-          color: "#C9A96E",
+          color: "#9F3F5C",
           marginTop: 4,
         }}
       >
@@ -86,7 +86,7 @@ const TeamCard = ({ img, name, title, bio }: (typeof team)[0]) => {
         style={{
           fontFamily: "'Inter', sans-serif",
           fontSize: 12,
-          color: "#C9A96E",
+          color: "#9F3F5C",
           textDecoration: "none",
           marginTop: 8,
           display: "inline-block",
@@ -116,7 +116,7 @@ const TeamSection = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.25em",
-            color: "#C9A96E",
+            color: "#9F3F5C",
           }}
         >
           OUR EXPERTS
@@ -166,8 +166,8 @@ const TeamSection = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.18em",
-            color: "#C9A96E",
-            border: "1.5px solid #C9A96E",
+            color: "#9F3F5C",
+            border: "1.5px solid #9F3F5C",
             padding: "14px 36px",
             textDecoration: "none",
             borderRadius: 3,
@@ -175,12 +175,12 @@ const TeamSection = () => (
             display: "inline-block",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#C9A96E";
+            e.currentTarget.style.background = "#9F3F5C";
             e.currentTarget.style.color = "#111111";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "transparent";
-            e.currentTarget.style.color = "#C9A96E";
+            e.currentTarget.style.color = "#9F3F5C";
           }}
         >
           MEET THE FULL TEAM →

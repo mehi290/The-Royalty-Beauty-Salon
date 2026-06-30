@@ -95,10 +95,10 @@ const Navbar = () => {
           <div
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 28,
+              fontSize: "clamp(16px, 2.2vw, 22px)",
               color: "white",
-              letterSpacing: "0.22em",
-              lineHeight: 1,
+              letterSpacing: "0.15em",
+              lineHeight: 1.2,
               opacity: scrolled ? 1 : 0,
               transition: "opacity 0.25s ease",
               pointerEvents: "none",
@@ -121,12 +121,22 @@ const Navbar = () => {
                 }}
                 style={{
                   padding: link.label === "Book Now" ? "12px 24px" : "0",
-                  background: link.label === "Book Now" ? "#E8E0D5" : "transparent",
-                  color: link.label === "Book Now" ? "#1A1A1A" : "#E8E0D5",
+                  background: link.label === "Book Now" ? "#9F3F5C" : "transparent",
+                  color: link.label === "Book Now" ? "#FFFFFF" : "#E8E0D5",
                   borderRadius: link.label === "Book Now" ? "6px" : "0",
                   fontWeight: link.label === "Book Now" ? "700" : "500",
                   textDecoration: "none",
                   transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  if (link.label === "Book Now") {
+                    e.currentTarget.style.background = "#7E2943";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (link.label === "Book Now") {
+                    e.currentTarget.style.background = "#9F3F5C";
+                  }
                 }}
               >
                 {link.label}

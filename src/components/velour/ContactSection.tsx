@@ -27,7 +27,7 @@ const ContactSection = () => {
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.22em",
-              color: "#C9A96E",
+              color: "#9F3F5C",
             }}
           >
             FIND US
@@ -47,11 +47,11 @@ const ContactSection = () => {
           <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
             {[
               {
-                icon: <MapPin size={20} color="#C9A96E" />,
+                icon: <MapPin size={20} color="#9F3F5C" />,
                 text: salonAddress,
               },
               {
-                icon: <Phone size={20} color="#C9A96E" />,
+                icon: <Phone size={20} color="#9F3F5C" />,
                 text: (
                   <a href="tel:+971564629378" style={{ color: "#3D3D3D", textDecoration: "none" }}>
                     0564629378
@@ -59,11 +59,11 @@ const ContactSection = () => {
                 ),
               },
               {
-                icon: <Clock size={20} color="#C9A96E" />,
+                icon: <Clock size={20} color="#9F3F5C" />,
                 text: "Sat – Thu: 9:00 AM – 9:00 PM · Friday: 10:00 AM – 8:00 PM",
               },
               {
-                icon: <MessageCircle size={20} color="#C9A96E" />,
+                icon: <MessageCircle size={20} color="#9F3F5C" />,
                 text: (
                   <>
                     Mobile:{" "}
@@ -101,7 +101,7 @@ const ContactSection = () => {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 letterSpacing: "0.18em",
-                background: "#C9A96E",
+                background: "#9F3F5C",
                 color: "#111111",
                 padding: "14px 32px",
                 textDecoration: "none",
@@ -109,8 +109,8 @@ const ContactSection = () => {
                 transition: "background 0.3s ease",
                 display: "inline-block",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#7E2943")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#9F3F5C")}
             >
               Get directions
             </a>
@@ -123,7 +123,7 @@ const ContactSection = () => {
           style={{
             height: 380,
             background: "#F0EBE3",
-            border: "1px solid #C9A96E",
+            border: "1px solid #9F3F5C",
             overflow: "hidden",
           }}
         >

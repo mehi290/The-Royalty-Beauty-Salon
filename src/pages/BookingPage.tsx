@@ -29,7 +29,7 @@ import {
 } from "@/data/bookingCatalog";
 import { getStylistById, stylists } from "@/data/stylists";
 
-const gold = "#C9A96E";
+const gold = "#9F3F5C";
 
 const iconMap: Record<BookingIconKey, React.ReactNode> = {
   scissors: <Scissors size={20} strokeWidth={1.5} />,

@@ -117,14 +117,14 @@
   height: 1px;
   bottom: -4px;
   left: 0;
-  background-color: #C9A96E;
+  background-color: #9F3F5C;
   transition: width 0.3s ease;
 }
 .velour-nav-link:hover::after {
   width: 100%;
 }
 .velour-nav-link:hover {
-  color: #C9A96E;
+  color: #9F3F5C;
 }
 
 .velour-marquee-track {
@@ -155,3 +155,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@keyframes typewriter-blink {
+  from, to { background-color: transparent }
+  50% { background-color: currentColor }
+}
+

@@ -23,7 +23,7 @@ const Footer = () => (
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 28,
-            color: "#C9A96E",
+            color: "#FFFFFF",
             letterSpacing: "0.2em",
           }}
         >
@@ -59,7 +59,7 @@ const Footer = () => (
               aria-label="Social link coming soon"
               title="Coming soon"
               style={{
-                color: "#C9A96E",
+                color: "#9F3F5C",
                 transition: "all 0.3s ease",
                 background: "none",
                 border: "none",
@@ -71,7 +71,7 @@ const Footer = () => (
                 e.currentTarget.style.transform = "scale(1.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = "#C9A96E";
+                e.currentTarget.style.color = "#9F3F5C";
                 e.currentTarget.style.transform = "scale(1)";
               }}
             >
@@ -89,7 +89,7 @@ const Footer = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.2em",
-            color: "#C9A96E",
+            color: "#FFFFFF",
             marginBottom: 20,
           }}
         >
@@ -108,7 +108,7 @@ const Footer = () => (
               textDecoration: "none",
               transition: "color 0.3s ease",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#9F3F5C")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#666666")}
           >
             {s}
@@ -124,7 +124,7 @@ const Footer = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.2em",
-            color: "#C9A96E",
+            color: "#FFFFFF",
             marginBottom: 20,
           }}
         >
@@ -144,7 +144,7 @@ const Footer = () => (
                 textDecoration: "none",
                 transition: "color 0.3s ease",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#9F3F5C")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#666666")}
             >
               {link.label}
@@ -178,7 +178,7 @@ const Footer = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.2em",
-            color: "#C9A96E",
+            color: "#FFFFFF",
             marginBottom: 20,
           }}
         >

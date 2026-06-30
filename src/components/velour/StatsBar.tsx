@@ -78,7 +78,7 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?:
 };
 
 const StatsBar = () => (
-  <section style={{ background: "#C9A96E", padding: "24px 40px" }}>
+  <section style={{ background: "#9F3F5C", padding: "24px 40px" }}>
     <div
       className="grid grid-cols-1 sm:grid-cols-3"
       style={{ maxWidth: 1200, margin: "0 auto" }}

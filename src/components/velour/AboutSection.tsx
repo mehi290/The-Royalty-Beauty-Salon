@@ -29,7 +29,7 @@ const AboutSection = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.25em",
-            color: "#C9A96E",
+            color: "#9F3F5C",
           }}
         >
           WHO WE ARE
@@ -76,8 +76,8 @@ const AboutSection = () => (
                 fontSize: 10,
                 textTransform: "uppercase",
                 letterSpacing: "0.2em",
-                color: "#C9A96E",
-                border: "1px solid #C9A96E",
+                color: "#9F3F5C",
+                border: "1px solid #9F3F5C",
                 padding: "8px 20px",
               }}
             >
@@ -99,7 +99,7 @@ const AboutSection = () => (
           style={{
             width: "100%",
             objectFit: "cover",
-            outline: "1px solid #C9A96E",
+            outline: "1px solid #9F3F5C",
             outlineOffset: 14,
           }}
         />

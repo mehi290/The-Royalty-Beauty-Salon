@@ -8,7 +8,7 @@ const OfferBanner = () => (
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "linear-gradient(135deg, #6B4F0D 0%, #C9A96E 50%, #6B4F0D 100%)",
+      background: "linear-gradient(135deg, #5C1F30 0%, #9F3F5C 50%, #5C1F30 100%)",
       backgroundSize: "200% 200%",
       animation: "velour-shimmer 6s ease infinite",
       padding: "0 20px",

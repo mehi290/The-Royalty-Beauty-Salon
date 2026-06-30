@@ -81,7 +81,7 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
       onFocus={() => setHovered(true)}
       onBlur={() => setHovered(false)}
       tabIndex={0}
-      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A96E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF7F2]"
+      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9F3F5C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF7F2]"
       style={{
         aspectRatio: "3/4",
         position: "relative",
@@ -220,7 +220,7 @@ const ServiceCard = ({ name, price, img, desc, video }: (typeof services)[0]) =>
               letterSpacing: "0.14em",
               color: "white",
               textDecoration: "none",
-              background: "#C9A96E",
+              background: "#9F3F5C",
               padding: "10px 16px",
               borderRadius: 999,
               opacity: hovered ? 1 : 0,
@@ -254,7 +254,7 @@ const ServicesSection = () => (
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.22em",
-            color: "#C9A96E",
+            color: "#9F3F5C",
           }}
         >
           WHAT WE OFFER
@@ -306,8 +306,8 @@ const ServicesSection = () => (
             fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.18em",
-            color: "#C9A96E",
-            border: "1.5px solid #C9A96E",
+            color: "#9F3F5C",
+            border: "1.5px solid #9F3F5C",
             padding: "14px 36px",
             textDecoration: "none",
             borderRadius: 3,
@@ -315,12 +315,12 @@ const ServicesSection = () => (
             display: "inline-block",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#C9A96E";
+            e.currentTarget.style.background = "#9F3F5C";
             e.currentTarget.style.color = "#111111";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "transparent";
-            e.currentTarget.style.color = "#C9A96E";
+            e.currentTarget.style.color = "#9F3F5C";
           }}
         >
           VIEW FULL SERVICE MENU →

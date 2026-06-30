@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
-const gold = "#C5A070";
-const goldMuted = "#C5A47E";
+const gold = "#9F3F5C";
+const goldMuted = "#b25571";
 
 const reviews = [
   {

@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { bookingCategories, type BookingIconKey } from "@/data/bookingCatalog";
 
-const gold = "#C9A96E";
+const gold = "#9F3F5C";
 
 const iconMap: Record<BookingIconKey, ReactNode> = {
   scissors: <Scissors size={18} strokeWidth={1.5} />,

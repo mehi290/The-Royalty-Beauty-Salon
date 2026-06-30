@@ -183,7 +183,7 @@ const BeforeAfterSlider = ({
             left: "50%",
             width: 2,
             transform: "translateX(-50%)",
-            background: "#C9A96E",
+            background: "#9F3F5C",
             boxShadow: "0 0 8px rgba(0,0,0,0.15)",
           }}
         />
@@ -196,7 +196,7 @@ const BeforeAfterSlider = ({
             width: 40,
             height: 40,
             borderRadius: "50%",
-            background: "#C9A96E",
+            background: "#9F3F5C",
             border: "2px solid rgba(255,255,255,0.95)",
             display: "flex",
             alignItems: "center",
@@ -243,7 +243,7 @@ const BeforeAfterSlider = ({
           letterSpacing: "0.06em",
           textTransform: "uppercase",
           color: "white",
-          background: "#C9A96E",
+          background: "#9F3F5C",
           borderRadius: 999,
           padding: "6px 12px",
         }}
@@ -365,7 +365,7 @@ const GallerySection = () => (
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.22em",
-            color: "#C5A078",
+            color: "#9F3F5C",
           }}
         >
           Transformations

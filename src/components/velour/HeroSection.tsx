@@ -1,7 +1,62 @@
 import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+
+const TypewriterText = ({
+  text,
+  delay = 70,
+  startDelay = 0,
+  onComplete,
+}: {
+  text: string;
+  delay?: number;
+  startDelay?: number;
+  onComplete?: () => void;
+}) => {
+  const [displayText, setDisplayText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  const [started, setStarted] = useState(false);
+  const onCompleteRef = useRef(onComplete);
+
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
+
+  useEffect(() => {
+    const startTimeout = setTimeout(() => {
+      setStarted(true);
+    }, startDelay);
+    return () => clearTimeout(startTimeout);
+  }, [startDelay]);
+
+  useEffect(() => {
+    if (!started) return;
+
+    setDisplayText(""); // Reset text on start
+    const interval = setInterval(() => {
+      setDisplayText((prev) => {
+        if (prev.length < text.length) {
+          return prev + text.charAt(prev.length);
+        } else {
+          clearInterval(interval);
+          if (onCompleteRef.current) onCompleteRef.current();
+          return prev;
+        }
+      });
+    }, delay);
+
+    return () => clearInterval(interval);
+  }, [started, text, delay]);
+
+  return (
+    <span>
+      {displayText}
+    </span>
+  );
+};
 
 const HeroSection = () => {
+  const [headingComplete, setHeadingComplete] = useState(false);
   const scrollToServices = () => {
     document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -69,9 +124,10 @@ const HeroSection = () => {
             lineHeight: 1.05,
             maxWidth: 820,
             marginTop: 20,
+            minHeight: "clamp(52px, 8vw, 92px)",
           }}
         >
-          Welcome to The Royalty Beauty Salon
+          <TypewriterText text="The Royalty Beauty Salon" delay={75} onComplete={() => setHeadingComplete(true)} />
         </h1>
 
         {/* Subheading */}
@@ -84,9 +140,12 @@ const HeroSection = () => {
             color: "#E8E0D5",
             maxWidth: 560,
             marginTop: 20,
+            minHeight: "clamp(18px, 2.2vw, 26px)",
           }}
         >
-          Luxury hair and beauty treatments
+          {headingComplete && (
+            <TypewriterText text="Luxury hair and beauty treatments" delay={45} />
+          )}
         </p>
 
         {/* Buttons */}
@@ -110,7 +169,7 @@ const HeroSection = () => {
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.18em",
-              background: "#C9A96E",
+              background: "#9F3F5C",
               color: "#111111",
               padding: "16px 40px",
               textDecoration: "none",
@@ -118,8 +177,8 @@ const HeroSection = () => {
               borderRadius: 3,
               transition: "background 0.3s ease",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#8B6914")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A96E")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "#7E2943")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "#9F3F5C")}
           >
             BOOK NOW
           </Link>
